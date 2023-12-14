@@ -1,18 +1,18 @@
 import React from "react";
 import { styled } from "styled-components";
 
-function Button() {
+function Home() {
     
     return (
-        <ButtonStyled >
+        <HomeStyled >
 
-        </ButtonStyled>
+        </HomeStyled>
     )
 }
 
-const ButtonStyled = styled.button`
+const HomeStyled = styled.Home`
     display: flex;
     align-items: center;
 `;
 
-export default Button
+export default Home
