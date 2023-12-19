@@ -1,18 +1,18 @@
 import React from "react";
 import { styled } from "styled-components";
 
-function Button() {
+function Footer() {
     
     return (
-        <ButtonStyled >
+        <FooterStyled >
 
-        </ButtonStyled>
+        </FooterStyled>
     )
 }
 
-const ButtonStyled = styled.button`
+const FooterStyled = styled.Footer`
     display: flex;
     align-items: center;
 `;
 
-export default Button
+export default Footer

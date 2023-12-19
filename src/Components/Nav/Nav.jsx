@@ -29,23 +29,6 @@ function Nav() {
 }
 
 const NavStyled = styled.Nav`
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
-}
-
-:root {
-    --text-color: #00fbff;
-    /* --text-color: pink; */
-    --bg-color: #323234;
-    /* --bg-color: #b4b4d4; */
-    --white: #fff;
-    --black: #000;
-    --mob-color: #444444;
-}
-
 .container {
     max-width: 1250px;
     width: 100%;
