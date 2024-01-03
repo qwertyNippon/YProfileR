@@ -12,7 +12,7 @@ function App() {
       <Nav />
       <Routes>
         <Route children path='/login' element={<Login  />} />
-        <Route children path='/signup' element={<Signup  />} />
+        <Route children path='/signup' element={<SignUp  />} />
       </Routes>
       <Footer />
     </>
