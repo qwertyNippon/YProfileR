@@ -1,18 +1,22 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
+import { useState } from "react";
+import axios from "axios";
 
-function Home() {
+
+function SignUp() {
     
     return (
-        <HomeStyled >
+        <SignUpStyled >
 
-        </HomeStyled>
+        </SignUpStyled>
     )
 }
 
-const HomeStyled = styled.Home`
+const HomeStyled = styled.SignUp`
     display: flex;
     align-items: center;
 `;
 
-export default Home
+export default SignUp
