@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { styled } from "styled-components";
+// import { styled } from "styled-components";
 import { useState, createContext, useContext } from "react";
-import { DataContext } from "../context/DataProvider";
+// import { DataContext } from "../context/DataProvider";
 import axios from "axios";
 
 const UserContext = createContext();
@@ -50,9 +50,9 @@ function Login() {
     )
 }
 
-const LoginStyled = styled.Login`
-    display: flex;
-    align-items: center;
-`;
+// const LoginStyled = styled.Login`
+//     display: flex;
+//     align-items: center;
+// `;
 
 export default Login

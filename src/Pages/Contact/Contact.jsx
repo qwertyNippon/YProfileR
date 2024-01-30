@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styled-components";
+// import { styled } from "styled-components";
 
 function Button() {
     
@@ -10,9 +10,9 @@ function Button() {
     )
 }
 
-const ButtonStyled = styled.button`
-    display: flex;
-    align-items: center;
-`;
+// const ButtonStyled = styled.button`
+//     display: flex;
+//     align-items: center;
+// `;
 
 export default Button

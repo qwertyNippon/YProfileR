@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styled-components";
+// import { styled } from "styled-components";
 
 function Footer() {
     
@@ -10,9 +10,9 @@ function Footer() {
     )
 }
 
-const FooterStyled = styled.Footer`
-    display: flex;
-    align-items: center;
-`;
+// const FooterStyled = styled.Footer`
+//     display: flex;
+//     align-items: center;
+// `;
 
 export default Footer
