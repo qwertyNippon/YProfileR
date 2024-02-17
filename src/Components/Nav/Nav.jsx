@@ -12,8 +12,13 @@ function Nav() {
                 <div className="container">
                     <nav>
                         <div className="logo">
-                            <a href="#"><span>Yuri</span> Japan</a>
+                            <a href="#"><span>Logo</span></a>
                         </div>
+                        <ul>
+                            <Link><a href="{{ url_for('home') }}">Dashboard</a></Link>
+                            <Link><a href="#">Find a Teacher</a></Link>
+                        </ul>
+                        <hr />
                         <ul>
                             <Link><a href="https://yport.onrender.com/">Home</a></Link>
                             <Link><a href="#">Profile</a></Link>
