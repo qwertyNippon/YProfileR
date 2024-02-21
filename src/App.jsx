@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { GlobalStyle } from './Styles/GlobalStyle'
+// import { GlobalStyle } from './Styles/GlobalStyle'
 
 import './App.css'
 import Nav from './Components/Nav/Nav'

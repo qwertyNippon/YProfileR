@@ -2,12 +2,12 @@ import React from "react";
 // import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
-// import { DataContext } from "../context/DataProvider";
+import { DataContext } from "../Context/DataProvider";
+import './Nav.css'
 
 function Nav() {
     
     return (
-        <NavStyled >
             <header>
                 <div className="container">
                     <nav>
@@ -32,8 +32,7 @@ function Nav() {
                     </nav>
                 </div>
             </header>
-        </NavStyled>
-    )
+    );
 }
 
 // const NavStyled = styled.Nav`
@@ -129,4 +128,4 @@ function Nav() {
 // }
 // `;
 
-export default Nav
+export default Nav;
