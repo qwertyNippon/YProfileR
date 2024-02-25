@@ -1,5 +1,9 @@
 import App from "./App";
-import DataProvider from "./Components/context/DataProvider";
+// import DataProvider from "./context/DataProvider.jsx";
+import { DataProvider } from "/Users/orlan/OneDrive/Documents/PostCodingTemple/OnlineLanguagePro/YProfileR/YuriProfileReact/src/context/DataProvider";
+
+
+
 const ProviderLayer = () => {
     return (
         <DataProvider>

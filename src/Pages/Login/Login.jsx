@@ -2,9 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 // import { styled } from "styled-components";
 import { useState, createContext, useContext } from "react";
-import { DataContext } from ".../context/DataProvider";
 import axios from "axios";
-import BASE_URL from '.../context/DataProvider'
 
 const UserContext = createContext();
 
@@ -46,7 +44,7 @@ function Login() {
     }
     return (
         <LoginStyled >
-
+            Test
         </LoginStyled>
     )
 }
