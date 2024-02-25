@@ -1,5 +1,5 @@
 import App from "./App";
-import DataProvider from "./Context/DataProvider";
+import DataProvider from "./Components/context/DataProvider";
 const ProviderLayer = () => {
     return (
         <DataProvider>

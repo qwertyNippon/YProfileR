@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 // import { styled } from "styled-components";
+import BASE_URL from '.../context/DataProvider'
 import { useState } from "react";
 import axios from "axios";
 
@@ -19,7 +20,7 @@ function SignUp() {
         vals['username']= e.target[1].value;
         vals['pass'] = e.target[2].value;
         console.log(vals);
-        axios.post('http://127.0.0.1:5000/signup', JSON.stringify(vals), {
+        axios.post(`${BASE_URL}/signup`, JSON.stringify(vals), {
             // when sight goes live the above address needs to change
             headers: { "Content-Type": "application/json" }
         }

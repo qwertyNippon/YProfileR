@@ -2,8 +2,9 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 // import { styled } from "styled-components";
 import { useState, createContext, useContext } from "react";
-// import { DataContext } from "../context/DataProvider";
+import { DataContext } from ".../context/DataProvider";
 import axios from "axios";
+import BASE_URL from '.../context/DataProvider'
 
 const UserContext = createContext();
 
@@ -25,7 +26,7 @@ function Login() {
         vals['username']= e.target[0].value;
         vals['pass'] = e.target[1].value;
         console.log(vals);
-        const response = await axios.post('http://127.0.0.1:5000/login', JSON.stringify(vals), {
+        const response = await axios.post(`${BASE_URL}/login`, JSON.stringify(vals), {
             headers: { "Content-Type": "application/json" },
         }
         )

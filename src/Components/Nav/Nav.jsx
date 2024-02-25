@@ -2,10 +2,25 @@ import React from "react";
 // import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
-import { DataContext } from "../Context/DataProvider";
+import { DataContext } from "../context/DataProvider";
 import './Nav.css'
 
 function Nav() {
+    const { user, setUser } = useContext(DataContext);
+    // const get_info = async () => {
+    //     const url = 'http://127.0.0.1:5000/api/API'
+        // will need 2 change above
+    //     const response = await axios.get(url) 
+    //     return response.status === 200 ? response.data : null
+    // }
+    // const users_name = async () => {
+    //     const data = await get_info()
+    //     console.log(data)
+    // }
+
+    const logout = () => {
+        setUser(null)
+      }
     
     return (
             <header>
@@ -20,11 +35,27 @@ function Nav() {
                         </ul>
                         <hr />
                         <ul>
-                            <Link><a href="https://yport.onrender.com/">Home</a></Link>
                             <Link><a href="#">Profile</a></Link>
                             <Link><a href="#">Courses</a></Link>
                             <Link><a href="#">Contact</a></Link>
                             <Link><a href="#">FAQ</a></Link>
+                            {user ? 
+                            <>
+                            <Link><a href="https://yport.onrender.com/">Home</a></Link>
+                            
+                            </>
+                            : null}
+                            
+                            {!user ? null :
+
+                                <>
+                                <li>
+                                    <div className="logsign">
+                                    <Link className="textD" to="/" onClick={()=>logout()}>LOGOUT</Link>
+                                    </div>
+                                </li>
+                                </>
+                                }                        
                         </ul>
                         <Nav className="hamburger">
                             <div className="bar"></div>

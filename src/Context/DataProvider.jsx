@@ -1,12 +1,31 @@
 import { createContext, useEffect, useState } from "react";
+
+const BASE_URL = 'http://localhost:5000/api/';
+
+
+
 const DataProvider = (props) => {
-    // const [cart, setCart] = useState({size:0, total:0, movies:{}});
-    const [addAnime, setAddAnime] = useState(null)
-    const [user, setUser] = useState(null)
-    useEffect(() => { console.log(user) });
+    
+    const get_User = async () => {
+    const [user, setUser] = useState(null);
+    const [error, setError] = useState([null]);
+
+    useEffect(() => {
+        axios.get({BASE_URL})
+        .then(response => {
+            setUser(response.data);
+        })
+        .catch(error => {
+            console.error('Error fetching profile:', error);
+        });
+    }, []);
+}
+
     return (
-        // <DataContext.Provider value={{'cart': cart, 'setCart': setCart}}>
-        <DataContext.Provider value={{'addAnime': addAnime, 'setAddAnime': setAddAnime, 'user' : user, 'setUser' : setUser}}>
+        <DataContext.Provider value={{
+            get_User,
+
+        }}>
             {props.children}
         </DataContext.Provider>
     )
