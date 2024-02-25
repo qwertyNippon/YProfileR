@@ -1,5 +1,4 @@
 import App from "./App";
-// import DataProvider from "./context/DataProvider.jsx";
 import { DataProvider } from "/Users/orlan/OneDrive/Documents/PostCodingTemple/OnlineLanguagePro/YProfileR/YuriProfileReact/src/context/DataProvider";
 
 
