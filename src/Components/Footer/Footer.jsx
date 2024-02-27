@@ -4,9 +4,12 @@ import React from "react";
 function Footer() {
     
     return (
-        <FooterStyled >
+        <>
+        Footer
+        </>
+        // <FooterStyled >
 
-        </FooterStyled>
+        // </FooterStyled>
     )
 }
 

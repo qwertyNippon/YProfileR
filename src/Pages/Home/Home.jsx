@@ -4,9 +4,12 @@ import React from "react";
 function Button() {
     
     return (
-        <ButtonStyled >
+        <>
+        Button
+        </>
+        // <ButtonStyled >
 
-        </ButtonStyled>
+        // </ButtonStyled>
     )
 }
 

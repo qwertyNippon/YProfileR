@@ -1,5 +1,5 @@
-import App from "./App";
-import { DataProvider } from "/Users/orlan/OneDrive/Documents/PostCodingTemple/OnlineLanguagePro/YProfileR/YuriProfileReact/src/context/DataProvider";
+import App from "./App"
+import  DataProvider  from "/Users/orlan/OneDrive/Documents/PostCodingTemple/OnlineLanguagePro/YProfileR/YuriProfileReact/src/context/DataProvider.jsx";
 
 
 
