@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { styled } from "styled-components";
 import { useState, createContext, useContext } from "react";
 import axios from "axios";
 
@@ -43,15 +42,10 @@ function Login() {
         }
     }
     return (
-        <LoginStyled >
-            Test
-        </LoginStyled>
+        < >
+            Login
+        </>
     )
 }
-
-// const LoginStyled = styled.Login`
-//     display: flex;
-//     align-items: center;
-// `;
 
 export default Login

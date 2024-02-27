@@ -1,18 +1,12 @@
 import React from "react";
-// import { styled } from "styled-components";
 
-function Button() {
+function Calendar() {
     
     return (
-        <ButtonStyled >
+        <Calendar >
 
-        </ButtonStyled>
+        </Calendar>
     )
 }
 
-// const ButtonStyled = styled.button`
-//     display: flex;
-//     align-items: center;
-// `;
-
-export default Button
+export default Calendar

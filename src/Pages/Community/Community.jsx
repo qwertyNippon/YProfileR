@@ -1,18 +1,12 @@
 import React from "react";
-// import { styled } from "styled-components";
 
-function Button() {
+function Community() {
     
     return (
-        <ButtonStyled >
+        <Community >
 
-        </ButtonStyled>
+        </Community>
     )
 }
 
-// const ButtonStyled = styled.button`
-//     display: flex;
-//     align-items: center;
-// `;
-
-export default Button
+export default Community

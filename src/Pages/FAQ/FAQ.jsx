@@ -1,18 +1,12 @@
 import React from "react";
-// import { styled } from "styled-components";
 
-function Button() {
+function FAQ() {
     
     return (
-        <ButtonStyled >
-
-        </ButtonStyled>
+        <FAQ >
+            FAQ
+        </FAQ>
     )
 }
 
-// const ButtonStyled = styled.button`
-//     display: flex;
-//     align-items: center;
-// `;
-
-export default Button
+export default FAQ
