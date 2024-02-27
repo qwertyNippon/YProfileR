@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { DataContext } from "/Users/orlan/OneDrive/Documents/PostCodingTemple/OnlineLanguagePro/YProfileR/YuriProfileReact/src/context/DataProvider";
-// import './Nav.css'
+import './Nav.css'
 
 function Nav() {
     const { user, setUser } = useContext(DataContext);
@@ -38,14 +38,14 @@ function Nav() {
                             <Link><a href="#">Courses</a></Link>
                             <Link><a href="#">Contact</a></Link>
                             <Link><a href="#">FAQ</a></Link>
-                            {/* {user ?  */}
+                             {user ?  
                             <>
-                            <Link><a href="https://yport.onrender.com/">Home</a></Link>
+                            <Link><a href="https://yport.onrender.com/">YuriPro</a></Link>
                             
                             </>
-                            {/* : null} */}
+                             : null} 
                             
-                            {/* {!user ? null : */}
+                            {!user ? null : 
 
                                 <>
                                 <li>
@@ -54,11 +54,8 @@ function Nav() {
                                     </div>
                                 </li>
                                 </>
-                             {/* }                          */}
+                            }
                         </ul>
-                        <Nav className="hamburger">
-                            <div className="bar"></div>
-                        </Nav>
                     </nav>
                 </div>
             </header>
