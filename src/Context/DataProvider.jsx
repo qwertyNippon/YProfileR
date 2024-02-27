@@ -23,7 +23,8 @@ const DataProvider = (props) => {
 
     return (
         <DataContext.Provider value={{
-            get_User,
+            user,
+            error
 
         }}>
             {props.children}
@@ -31,4 +32,8 @@ const DataProvider = (props) => {
     )
 } 
 export default DataProvider;
-export const DataContext = createContext();
+export { DataContext };
+// export const DataContext = createContext();
+
+// Check the chatGPT page shows how to fix our issues
+// some I changed do more tommorrow
