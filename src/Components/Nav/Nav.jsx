@@ -24,33 +24,55 @@ function Nav() {
     return (
         <>
             {/* {user ? */}
-                <header>
-                    <div className="container">
-                        <nav>
-                            <div className="logo">
-                                <a href="#"><span>Logo</span></a>
+            <header1>
+                <div className="container">
+                    <nav>
+                        <div className="logo">
+                            <a href="#"><span>Logo</span></a>
+                        </div>
+                        <ul>
+                            <Link><a href="{{ url_for('home') }}"><p>Dashboard</p></a></Link>
+                            <Link><a href="#"><p>Find a Teacher</p></a></Link>
+                            <Link><a href="#">recommend to a friend</a></Link>
+                            <Link><a href="#">icon</a></Link>
+                        </ul>
+                    </nav>
+                </ div>
+            </ header1>
+                    <hr />
+            <header>
+                <div className="container">
+                    <nav>
+                        <ul>
+                            <div className="selectOptions">
+                                <button id="selectButt"><Link><a href="#">messages</a></Link></button>
                             </div>
-                            <ul>
-                                <Link><a href="{{ url_for('home') }}">Dashboard</a></Link>
-                                <Link><a href="#">Find a Teacher</a></Link>
-                                <Link><a href="#">recommend to a friend</a></Link>
-                                <Link><a href="#">icon</a></Link>
-                            </ul>
-                            <hr />
-                            <ul>
-                                <Link><a href="#">messages</a></Link>
-                                <Link><a href="#">my lessons</a></Link>
-                                <Link><a href="#">classroom</a></Link>
-                                <Link><a href="#">calendar</a></Link>
-                                <Link><a href="#">statistics</a></Link>
-                                <Link><a href="#">my profile</a></Link>
-                                <Link><a href="#">settings</a></Link>
-                                <Link><a href="#">community</a></Link>
-                            </ul>
-                            <hr />
-                        </nav>
-                    </div>
-                </header>
+                            <div className="selectOptions">
+                                <button><Link><a href="#">my lessons</a></Link></button>
+                            </div>
+                            <div className="selectOptions">
+                                <button><Link><a href="#">classroom</a></Link></button>
+                            </div>
+                            <div className="selectOptions">
+                                <button><Link><a href="#">calendar</a></Link></button>
+                            </div>
+                            <div className="selectOptions">
+                                <button><Link><a href="#">statistics</a></Link></button>
+                            </div>
+                            <div className="selectOptions">
+                                <button><Link><a href="#">my profile</a></Link></button>
+                            </div>
+                            <div className="selectOptions">
+                                <button><Link><a href="#">settings</a></Link></button>
+                            </div>
+                            <div className="selectOptions">
+                                <button><Link><a href="#">community</a></Link></button>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+                <hr />
+            </header>
                 {/* : null}  */}
 
 

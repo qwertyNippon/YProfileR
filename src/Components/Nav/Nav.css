@@ -1,11 +1,27 @@
+:root {
+    --primary-color: #222260;
+    --primary-color2: 'color: rgba(34, 34, 96, .6)';
+    --primary-color3: 'color: rgba(34, 34, 96, .4)';
+    --color-green: #42AD00;
+    --color-red: #FF0000;
+    --color-grey: #aaa;
+    --color-accent: #F56692;
+    --color-delete: #FF0000;
+
+    --text--: #000;
+    --white--: #fff;
+}
+
+
 .container {
+    display: flex;
     max-width: 1250px;
     width: 100%;
     margin: 0 auto;
 }
 
-header {
-    background: var(--bg-color);
+header1 {
+    background: var(--white--);
     height: 90px;
     display: flex;
     align-items: center;
@@ -18,73 +34,60 @@ nav {
     justify-content: space-between;
 }
 
-nav .logo {
-    z-index: 1;
-}
-
 nav .logo a {
     text-decoration: none;
     font-size: 32px;
     font-weight: 600;
-    color: var(--white);
+    color: var(--text--);
 }
 
 nav .logo a span {
-    color: var(--text-color);
+    color: var(--text--);
 }
 
 nav ul {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 35px;
+    /* justify-content: center; */
+    gap: 25px;
     font-size: 18px;
     list-style: none;
-    z-index: 1;
 }
 
-nav ul li a {
-    text-decoration: none;
+nav ul div a {
     color: var(--white);
-    transition: 0.4s ease;
+    transition: 0.4s ease;  
 }
 
-nav ul li a:hover {
+nav ul div button :hover {
     color: var(--text-color);
+    border-color: none;
+
 }
 
-nav .hamburger {
-    position: relative;
-    width: 30px;
+a {
+    text-decoration: none;
+  }
+
+  .selectOptions button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: var(--white--);
     cursor: pointer;
-    appearance: none;
-    background: none;
-    outline: none;
-    border: none;
-    display: none;
-    scale: 0.8;
-}
+    transition: border-color 0.25s;
+  }
 
-nav .hamburger .bar,
-nav .hamburger::after,
-nav .hamburger::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    background: var(--white);
-    margin: 6px 0;
-    transition: 0.4s;
-}
+  .selectOptions button :hover {
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 1rem 0.5rem;
+    margin: 1rem -0.5rem;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+  }
 
-nav .hamburger.active::before {
-    transform: rotate(-45deg) translate(-8px, 5px);
-}
-
-nav .hamburger.active::after {
-    transform: rotate(45deg) translate(-8px, -5px);
-}
-
-nav .hamburger.active .bar {
-    opacity: 0;
-}
