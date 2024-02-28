@@ -33,25 +33,27 @@ function Nav() {
                             <ul>
                                 <Link><a href="{{ url_for('home') }}">Dashboard</a></Link>
                                 <Link><a href="#">Find a Teacher</a></Link>
+                                <Link><a href="#">recommend to a friend</a></Link>
+                                <Link><a href="#">icon</a></Link>
                             </ul>
                             <hr />
                             <ul>
-                                <Link><a href="#">Profile</a></Link>
-                                <Link><a href="#">Courses</a></Link>
-                                <Link><a href="#">Contact</a></Link>
-                                <Link><a href="#">FAQ</a></Link>
-                                <>
-                                    <Link><a href="https://yport.onrender.com/">YuriPro</a></Link>
-
-                                </>
-
+                                <Link><a href="#">messages</a></Link>
+                                <Link><a href="#">my lessons</a></Link>
+                                <Link><a href="#">classroom</a></Link>
+                                <Link><a href="#">calendar</a></Link>
+                                <Link><a href="#">statistics</a></Link>
+                                <Link><a href="#">my profile</a></Link>
+                                <Link><a href="#">settings</a></Link>
+                                <Link><a href="#">community</a></Link>
                             </ul>
+                            <hr />
                         </nav>
                     </div>
                 </header>
                 {/* : null}  */}
 
-                
+
                     {/* {!user ? null : 
                         
                         <>
