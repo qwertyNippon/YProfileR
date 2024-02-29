@@ -48,11 +48,11 @@ function Nav() {
             </ header1>
                     <hr />
             <header>
-                <div className="">
+                <div className="" >
                     <nav>
                         <ul>
                             <div className="selectOptions">
-                                <button id="selectButt"><Link><a href="#">messages</a></Link></button>
+                                <button><Link><a href="#">messages</a></Link></button>
                             </div>
                             <div className="selectOptions">
                                 <button><Link><a href="#">my lessons</a></Link></button>
