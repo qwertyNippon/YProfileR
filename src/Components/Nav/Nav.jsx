@@ -32,7 +32,9 @@ function Nav() {
                             <a href="#"><span>Logo</span></a>
                         </div>
                         <ul>
-                            <Link><a href="{{ url_for('home') }}"><p className="navLinks">Dashboard</p></a></Link>
+
+                                <Link><a href="{{ url_for('home') }}"><p className="navLinks">Dashboard</p></a></Link>
+                            
                             <Link><a href="#"><p className="navLinks">Find a Teacher</p></a></Link>
                         </ul>
                     </nav>
@@ -40,7 +42,9 @@ function Nav() {
                 <div className="">
                     <nav>
                         <ul>
-                            <button><Link><a className="navLinks" href="#">refer a friend</a></Link></button>
+                            <span className="">
+                                <button className="friendButt"><Link><a className="navLinks" href="#">refer a friend</a></Link></button>
+                            </span> 
                             <Link><a className="navLinks" href="#"><Icons /></a></Link>
                         </ul>
                     </nav>

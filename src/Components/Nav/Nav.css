@@ -102,3 +102,16 @@ a {
     font-weight: 500;
     font-family: inherit;
   }
+
+.friendButt {
+    border-radius: 8px;
+    border: 2px solid ;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    background-color: var(--white--);
+    cursor: pointer;
+}
+
+.friendButt:hover{
+    background-color:var(--color-grey);
+}
