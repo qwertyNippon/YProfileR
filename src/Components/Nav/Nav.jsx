@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { DataContext } from "/Users/orlan/OneDrive/Documents/PostCodingTemple/OnlineLanguagePro/YProfileR/YuriProfileReact/src/context/DataProvider";
+import Icons from '../Icons/Profile_icons';
 import './Nav.css'
 
 function Nav() {
@@ -31,17 +32,23 @@ function Nav() {
                             <a href="#"><span>Logo</span></a>
                         </div>
                         <ul>
-                            <Link><a href="{{ url_for('home') }}"><p>Dashboard</p></a></Link>
-                            <Link><a href="#"><p>Find a Teacher</p></a></Link>
-                            <Link><a href="#">recommend to a friend</a></Link>
-                            <Link><a href="#">icon</a></Link>
+                            <Link><a href="{{ url_for('home') }}"><p className="navLinks">Dashboard</p></a></Link>
+                            <Link><a href="#"><p className="navLinks">Find a Teacher</p></a></Link>
                         </ul>
                     </nav>
                 </ div>
+                <div className="">
+                    <nav>
+                        <ul>
+                            <button><Link><a className="navLinks" href="#">refer a friend</a></Link></button>
+                            <Link><a className="navLinks" href="#"><Icons /></a></Link>
+                        </ul>
+                    </nav>
+                </div>
             </ header1>
                     <hr />
             <header>
-                <div className="container">
+                <div className="">
                     <nav>
                         <ul>
                             <div className="selectOptions">

@@ -17,7 +17,17 @@
     display: flex;
     max-width: 1250px;
     width: 100%;
-    margin: 0 auto;
+}
+
+.navLinks {
+    color: var(--text--);
+    font-weight: 600;
+}
+
+#rLinks {
+    display: flex;
+    flex-direction: row; /* Main axis is horizontal */
+    justify-content: flex-end;
 }
 
 header1 {
@@ -50,6 +60,8 @@ nav ul {
     align-items: center;
     /* justify-content: center; */
     gap: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 18px;
     list-style: none;
 }
