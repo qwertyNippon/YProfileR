@@ -15,3 +15,9 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.hr {
+    overflow-x: hidden;
+    width: 110%;
+    margin-left: -50px;
+}

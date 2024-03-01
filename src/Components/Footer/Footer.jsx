@@ -7,7 +7,7 @@ function Footer() {
         <>
             <footer class="space" id="FAQ">
 
-                <hr />
+                <hr className="hr"/>
 
                 <div className="">
                     <div className="row">
