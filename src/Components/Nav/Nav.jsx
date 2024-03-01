@@ -42,7 +42,7 @@ function Nav() {
                 <div className="">
                     <nav>
                         <ul>
-                            <span className="">
+                            <span className="noShow">
                                 <button className="friendButt"><Link><a className="navLinks" href="#">refer a friend</a></Link></button>
                             </span> 
                             <Link><a className="navLinks" href="#"><Icons /></a></Link>
@@ -50,9 +50,9 @@ function Nav() {
                     </nav>
                 </div>
             </ header1>
-                    <hr />
+                    <hr className="noShow"/>
             <header>
-                <div className="" >
+                <div className="noShow" >
                     <nav>
                         <ul>
                             <div className="selectOptions">
@@ -82,7 +82,7 @@ function Nav() {
                         </ul>
                     </nav>
                 </div>
-                <hr />
+                <hr className="noShow"/>
             </header>
                 {/* : null}  */}
 
