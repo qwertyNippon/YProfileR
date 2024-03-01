@@ -36,6 +36,7 @@ header1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 2rem;
 }
 
 nav {
@@ -119,6 +120,11 @@ a {
 .noShow {
     transition: border-color 0.25s;
     /* display: hidden; */
+}
+
+.hr {
+    overflow-x: hidden;
+    width: 110%;
 }
 
 @media screen and (max-width: 875px){

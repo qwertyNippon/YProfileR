@@ -1,0 +1,17 @@
+.makeCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+}
+
+.space {
+    display: block;
+    margin: 10px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

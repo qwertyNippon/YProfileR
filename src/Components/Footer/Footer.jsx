@@ -1,10 +1,31 @@
 import React from "react";
+import './Footer.css'
 
 function Footer() {
     
     return (
         <>
-        Footer
+            <footer class="space" id="FAQ">
+
+                <hr />
+
+                <div className="">
+                    <div className="row">
+                        <div className="">
+                            <p className="makeCenter">
+                                Copyright &copy; 2024 All Rights Reserved by
+                                <div className="column space">
+                                    <a href="#">YURI JAPAN</a>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="https://www.instagram.com/yuri_japan_japanese_education_?igsh=anRsM3YweG43cjNx&utm_source=qr&fbclid=IwAR0KfRjanxLNF1PD7HV5bnSmivmAm_1IQTiuo4qXe3cZfcIVxZZPGVf3_AY" target="_blank" class="fa-brands fa-instagram"></a>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="https://www.youtube.com/@YURIJAPAN.JapaneseEducation" target="_blank" class="fa-brands fa-youtube"></a>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </>
     )
 }

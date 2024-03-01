@@ -25,7 +25,7 @@ function Nav() {
     return (
         <>
             {/* {user ? */}
-            <header1>
+            <header1 >
                 <div className="container">
                     <nav>
                         <div className="logo">
@@ -48,7 +48,7 @@ function Nav() {
                     </nav>
                 </div>
             </ header1>
-                    <hr className="noShow"/>
+                <hr className="noShow hr"/>
             <header>
                 <div className="noShow" >
                     <nav>
@@ -80,7 +80,7 @@ function Nav() {
                         </ul>
                     </nav>
                 </div>
-                <hr className="noShow"/>
+                <hr className="noShow hr"/>
             </header>
                 {/* : null}  */}
 
