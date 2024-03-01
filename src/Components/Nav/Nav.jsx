@@ -32,9 +32,7 @@ function Nav() {
                             <a href="#"><span>Logo</span></a>
                         </div>
                         <ul>
-
-                                <Link><a href="{{ url_for('home') }}"><p className="navLinks">Dashboard</p></a></Link>
-                            
+                            <Link><a href="{{ url_for('home') }}"><p className="navLinks">Dashboard</p></a></Link>
                             <Link><a href="#"><p className="navLinks">Find a Teacher</p></a></Link>
                         </ul>
                     </nav>
