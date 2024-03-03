@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, createContext, useContext } from "react";
 import axios from "axios";
+import './Login.css'
 
 const UserContext = createContext();
 
@@ -43,7 +44,20 @@ function Login() {
     }
     return (
         < >
-            Login
+            <div>Log in</div>
+            <hr /> <span>OR</span> <hr />
+
+            <div>
+                <div>Email</div>
+                <form action=""></form>
+                <div>Password</div>
+                <form action=""></form>
+                <Link><a href="#">Forgot your password?</a></Link>
+            </div>
+
+            <button>Log in</button>
+
+            <div>By clicking Log in or Continue with, you agree to Preply <span>Terms of Use</span> and <span>Privacy Policy</span></div>
         </>
     )
 }
