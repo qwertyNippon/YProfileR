@@ -1,18 +1,66 @@
+.top{
+    padding-top: 4rem;
+}
+
 .Login {
     display: block;
+    flex-direction: start;
     font-weight: 600;
+}
+
+.container_login {
+    display: flex;
+    border: 2px solid;
+    /* flex-direction: column; */
+    align-items: center;
+    /* max-width: 60vw; */
+    width: 650px;
+    height: 410px;
+    /* padding-left: 50px; */
+    color: red;
+    background-color: gray;
+}
+
+.tutOstud{
+    width: 500px;
+    display: flex;
+    flex-direction: start;
+    left: -50px;
+}
+
+.parent1 {
+    display: grid;
+    grid-template-columns: 0.5fr 0.2fr 0.4fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 0px;
+    align-items: center;
+    text-align: center;
+}
+
+.gridTOS_item {
+    display: flex;
+    width: 20px;
+    background-color: pink;
+    text-align: center;
+    grid-row: 1;
+}
+
+.gridTOS_sides{
+    /* min-width: 300px; */
+    grid-row: 1;
 }
   
   .grid-item {
     display: flex;
     max-width: 25px;
-    text-align: center;
+    /* text-align: center; */
     grid-row: 1;
   }
   
   .grid-hr {
     background-color: #000;
-    min-width: 300px;
+    /* position: absolute; */
+    max-width: 100%;
     grid-row: 1;
   }
 
@@ -21,5 +69,23 @@
     grid-template-columns: 1fr 0.2fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 20px;
-    grid-row-gap: 0px;
+    grid-row-gap: 10px;
+    align-items: center;
+    text-align: center;
+    /* position: relative; */
+    max-width: 100%;
 }
+
+.choose{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.choose > * {
+    margin-right: 20px; 
+  }
+
+.choose > :last-child {
+    margin-right: 0;
+  }

@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      {/* <Nav /> */}
+      <Nav />
       <Routes>
         {/* <Route children path='/' element={<Home  />} /> */}
         <Route children path='/' element={<Login  />} />

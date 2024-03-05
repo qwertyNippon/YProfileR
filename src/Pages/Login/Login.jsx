@@ -44,34 +44,38 @@ function Login() {
     // }
     return (
         < >
-            <div className="container makeCenter">
-                <div className="Login">Log in</div>
+            <div className="makeCenter top">
+                <div className="container_login makeCenter">
+                    <div className="Login makeCenter">Log in</div>
 
-                <div>
-                    <Link><a href="#">Sign up as a student</a></Link> <p>OR</p> <Link><a href="#">Sign up as a student</a></Link>
+                    <div className="choose">
+                        <Link className=""><a href="#">Sign up as tutor</a></Link>
+                        <div className="">or</div>
+                        <Link className=""><a href="#">Sign up as a student</a></Link>
+                    </div>
+
+                    <div>INSERT GOOGLE AND OTHER LOGINS</div>
+
+                    <div class="parent ">
+                        <hr className="grid-hr" />
+                        <div className="grid-item">or</div>
+                        <hr className="grid-hr" />
+                    </div>
+
+                    <div>
+                        <div>Email</div>
+                        <form action=""></form>
+                        <div>Password</div>
+                        <form action=""></form>
+                        <Link><a href="#">Forgot your password?</a></Link>
+                    </div>
+
+                    <button>Log in</button>
+
+                    <div>By clicking Log in or Continue with, you agree to Preply <span>Terms of Use</span> and <span>Privacy Policy</span></div>
+
+
                 </div>
-
-                <div>INSERT GOOGLE AND OTHER LOGINS</div>
-
-                <div class="parent">
-                    <hr className="grid-hr" />
-                    <div className="grid-item">or</div>
-                    <hr className="grid-hr" />
-                </div>
-
-                <div>
-                    <div>Email</div>
-                    <form action=""></form>
-                    <div>Password</div>
-                    <form action=""></form>
-                    <Link><a href="#">Forgot your password?</a></Link>
-                </div>
-
-                <button>Log in</button>
-
-                <div>By clicking Log in or Continue with, you agree to Preply <span>Terms of Use</span> and <span>Privacy Policy</span></div>
-
-
             </div>
         </>
     )
