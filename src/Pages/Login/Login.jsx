@@ -55,7 +55,7 @@ function Login() {
 
                 <div class="parent">
                     <hr className="grid-hr" />
-                    <div className="grid-item">OR </div>
+                    <div className="grid-item">or</div>
                     <hr className="grid-hr" />
                 </div>
 
