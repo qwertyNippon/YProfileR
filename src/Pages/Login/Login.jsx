@@ -46,9 +46,9 @@ function Login() {
         < >
             <div className="makeCenter top">
                 <div className="container_login makeCenter">
-                    <div className="Login makeCenter">Log in</div>
+                    <div className="Login makeCenter space">Log in</div>
 
-                    <div className="choose">
+                    <div className="choose ">
                         <Link className=""><a href="#">Sign up as tutor</a></Link>
                         <div className="">or</div>
                         <Link className=""><a href="#">Sign up as a student</a></Link>

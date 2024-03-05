@@ -6,6 +6,7 @@
     display: block;
     flex-direction: start;
     font-weight: 600;
+    font-size: 20px;
 }
 
 .container_login {
@@ -72,6 +73,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    padding: 25px;
 }
 
 .choose > * {
