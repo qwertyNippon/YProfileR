@@ -72,7 +72,7 @@ function Login() {
 
                     <button>Log in</button>
 
-                    <div>By clicking Log in or Continue with, you agree to Preply <span>Terms of Use</span> and <span>Privacy Policy</span></div>
+                    <div className="bottomText space">By clicking Log in or Continue with, you agree to Preply <Link><a href="#" className="TOS">Terms of Use</a></Link> and <Link><a href="#" className="TOS">Privacy Policy</a></Link></div>
 
 
                 </div>
