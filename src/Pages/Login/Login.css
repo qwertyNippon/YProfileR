@@ -10,7 +10,7 @@
 
 .container_login {
     display: flex;
-    border: 2px solid;
+    border-radius: 8px;
     /* flex-direction: column; */
     align-items: center;
     /* max-width: 60vw; */
@@ -18,7 +18,7 @@
     height: 410px;
     /* padding-left: 50px; */
     color: red;
-    background-color: gray;
+    background-color: var(--color-grey);
 }
 
 .tutOstud{
