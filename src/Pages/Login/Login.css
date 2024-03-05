@@ -2,25 +2,24 @@
     display: block;
     font-weight: 600;
 }
-
-/* styles.css */
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1px 1fr; /* Two columns with a 1px gap in between */
-    grid-gap: 20px; 
-  }
   
   .grid-item {
     display: flex;
-    background-color: #f0f0f0;
+    max-width: 25px;
     text-align: center;
     grid-row: 1;
   }
   
   .grid-hr {
-    /* margin: 0; */
-    /* border: none; */
     background-color: #000;
     min-width: 300px;
     grid-row: 1;
   }
+
+  .parent {
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+}

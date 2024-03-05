@@ -53,12 +53,10 @@ function Login() {
 
                 <div>INSERT GOOGLE AND OTHER LOGINS</div>
 
-                <div >
-                    <div className="grid-container">
-                        <hr className="grid-hr" />
-                        <div className="grid-item">OR</div>
-                        <hr className="grid-hr" />
-                    </div>
+                <div class="parent">
+                    <hr className="grid-hr" />
+                    <div className="grid-item">OR </div>
+                    <hr className="grid-hr" />
                 </div>
 
                 <div>
