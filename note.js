@@ -4,3 +4,4 @@
 // Fixed the issue of react not showing up.
 // Next start building pages
 // Work on login and sign up
+// work various navbars for diferent pages

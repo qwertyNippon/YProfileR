@@ -61,16 +61,13 @@ function Login() {
                         <div className="grid-item">or</div>
                         <hr className="grid-hr" />
                     </div>
-
-                    <div>
-                        <div>Email</div>
-                        <form action=""></form>
-                        <div>Password</div>
-                        <form action=""></form>
-                        <Link><a href="#">Forgot your password?</a></Link>
+                    
+                    <div className="login-form">
+                        {/* <input type="email" placeholder="Email" className="input-field" /> */}
+                        <input type="text" placeholder="Username" className="input-field" />
+                        <input type="password" placeholder="Password" className="input-field" />
+                        <button type="submit" className="submit-button">Login</button>
                     </div>
-
-                    <button>Log in</button>
 
                     <div className="bottomText space">By clicking Log in or Continue with, you agree to Preply <Link><a href="#" className="TOS">Terms of Use</a></Link> and <Link><a href="#" className="TOS">Privacy Policy</a></Link></div>
 

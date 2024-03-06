@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { DataContext } from "/Users/orlan/OneDrive/Documents/PostCodingTemple/OnlineLanguagePro/YProfileR/YuriProfileReact/src/context/DataProvider";
 import Icons from '../Icons/Profile_icons';
-import './Nav.css'
+import './NavPass.css'
 
-function Nav() {
+function NavPass() {
     const { user, setUser } = useContext(DataContext);
     // const get_info = async () => {
     //     const url = 'http://127.0.0.1:5000/api/API'
@@ -21,10 +21,10 @@ function Nav() {
     const logout = () => {
         setUser(null)
       }
-    
+
     return (
         <>
-            {/* {user ? */}
+
             <header1 >
                 <div className="container">
                     <nav>
@@ -82,7 +82,6 @@ function Nav() {
                 </div>
                 <hr className="noShow hr"/>
             </header>
-                {/* : null}  */}
 
 
                     {/* {!user ? null : 
@@ -100,4 +99,4 @@ function Nav() {
     );
 }
 
-export default Nav;
+export default NavPass;
