@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { DataContext } from "/Users/orlan/OneDrive/Documents/PostCodingTemple/OnlineLanguagePro/YProfileR/YuriProfileReact/src/context/DataProvider";
 import Icons from '../Icons/Profile_icons';
-import './NavPass.css'
+import './NavPass.css';
+import Logo from '../../assets/Logo.png'
 
 function NavPass() {
     const { user, setUser } = useContext(DataContext);
@@ -29,7 +30,7 @@ function NavPass() {
                 <div className="container">
                     <nav>
                         <div className="logo">
-                            <a href="#"><span>Logo</span></a>
+                            <a href="#"><img className="LogoPic" src={Logo} alt="Logo" /></a>
                         </div>
                         <ul>
                             <Link><a href="{{ url_for('home') }}"><p className="navLinks">Dashboard</p></a></Link>

@@ -39,6 +39,20 @@ header1 {
     margin-left: 2rem;
 }
 
+.logo {
+    display: flex;
+}
+
+.LogoPic {
+    width: 105px;
+    transition: flex-grow 0.3s ease;
+    border-radius: 25px;
+}
+
+.LogoPic:hover {
+    transform: scale(1.05);
+}
+
 nav {
     display: flex;
     align-items: center;
