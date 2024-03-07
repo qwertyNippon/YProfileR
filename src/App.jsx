@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import './App.css'
 import NavPass from './Components/Nav/NavPass'
+import NavLogin from './Components/Nav/NavLogin'
 import Footer from './Components/Footer/Footer'
 import Home from './Pages/Home/Home'
 import SignUp from './Pages/SignUp/SignUp'
@@ -13,11 +14,9 @@ function App() {
   const [currentUrl, setCurrentUrl] = useState(window.location.href);
 
   let NavComponent;
-  if (currentUrl.includes('/')) {
-    NavComponent = NavPass;
-  } else if (currentUrl.includes('SignUp')) {
-    NavComponent = NavSign;
-  } else if (currentUrl.includes('Login')) {
+  if (currentUrl.includes('/Login')) {
+    NavComponent = NavLogin;
+  } else if (currentUrl.includes('/SignUp')){
     NavComponent = NavLogin;
   } else {
     NavComponent = NavPass;
