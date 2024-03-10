@@ -33,8 +33,8 @@ function NavPass() {
                             <a href="#"><img className="LogoPic" src={Logo} alt="Logo" /></a>
                         </div>
                         <ul>
-                            <Link><a href="{{ url_for('home') }}"><p className="navLinks">Dashboard</p></a></Link>
-                            <Link><a href="#"><p className="navLinks">Find a Teacher</p></a></Link>
+                            <Link to="{{ url_for('home') }}"><p className="navLinks">Dashboard</p></Link>
+                            <Link to='#'><p className="navLinks">Find a Teacher</p></Link>
                         </ul>
                     </nav>
                 </ div>
@@ -42,9 +42,9 @@ function NavPass() {
                     <nav>
                         <ul>
                             <span className="noShow">
-                                <button className="friendButt"><Link><a className="navLinks" href="#">refer a friend</a></Link></button>
+                                <button className="friendButt"><Link to='#' className="navLinks">refer a friend</Link></button>
                             </span> 
-                            <Link><a className="navLinks" href="#"><Icons /></a></Link>
+                            <Link to='#' className="navLinks"><Icons /></Link>
                         </ul>
                     </nav>
                 </div>
@@ -55,28 +55,28 @@ function NavPass() {
                     <nav>
                         <ul>
                             <div className="selectOptions">
-                                <button><Link><a href="#">messages</a></Link></button>
+                                <button><Link to='#'>messages</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link><a href="#">my lessons</a></Link></button>
+                                <button><Link to='#'>my lessons</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link><a href="#">classroom</a></Link></button>
+                                <button><Link to='#'>classroom</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link><a href="#">calendar</a></Link></button>
+                                <button><Link to='#'>calendar</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link><a href="#">statistics</a></Link></button>
+                                <button><Link to='#'>statistics</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link><a href="#">my profile</a></Link></button>
+                                <button><Link to='#'>my profile</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link><a href="#">settings</a></Link></button>
+                                <button><Link to='#'>settings</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link><a href="#">community</a></Link></button>
+                                <button><Link to='#'>community</Link></button>
                             </div>
                         </ul>
                     </nav>

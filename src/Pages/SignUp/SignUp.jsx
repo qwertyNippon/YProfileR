@@ -40,9 +40,9 @@ function SignUp() {
                     <div className="Login makeCenter space">Sign up</div>
 
                     <div className="choose ">
-                        <Link className=""><a href="#">Sign up as tutor</a></Link>
+                        <Link to='#'>Sign up as tutor</Link>
                         <div className="">or</div>
-                        <Link className=""><a href="#">Sign up as a student</a></Link>
+                        <Link to='#'>Sign up as a student</Link>
                     </div>
 
                     <div>INSERT GOOGLE AND OTHER LOGINS</div>
