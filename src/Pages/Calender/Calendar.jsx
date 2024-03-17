@@ -1,11 +1,17 @@
 import React from "react";
+import { getMonth } from '../../util'
 
 function Calendar() {
     
     return (
-        <Calendar >
-
-        </Calendar>
+        <>
+            <div>
+                <div className="flex fleax-columns">
+                    <calendarHeader></calendarHeader>
+                    <div className="flex flex-1"></div>
+                </div>
+            </div>
+        </>
     )
 }
 

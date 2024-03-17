@@ -9,6 +9,7 @@ import Footer from './Components/Footer/Footer'
 import Home from './Pages/Home/Home'
 import SignUp from './Pages/SignUp/SignUp'
 import Login from './Pages/Login/Login'
+import Calendar from './Pages/Calender/Calendar'
 
 function App() {
   const [currentUrl, setCurrentUrl] = useState(window.location.href);
@@ -29,6 +30,7 @@ function App() {
           <Route children path='/' element={<Home />} />
           <Route children path='/Login' element={<Login />} />
           <Route children path='/SignUp' element={<SignUp />} />
+          <Route children path='/Calendar' element={<Calendar />} />
         </Routes>
         <Footer />
     </>
