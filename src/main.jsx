@@ -5,6 +5,8 @@ import ProviderLayer from './ProviderLayer'
 
 import App from './App.jsx'
 import './index.css'
+// import reportWebVitals from "./reportWebVitals";
+// import ContextWrapper from "./context/ContextWrapper";
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
 //   <React.StrictMode>
@@ -18,4 +20,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <ProviderLayer />
     </BrowserRouter>
   </React.StrictMode>,
-)
+);
+
+// reportWebVitals();
