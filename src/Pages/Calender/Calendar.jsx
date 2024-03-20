@@ -19,12 +19,6 @@ function Calendar() {
     
     return (
         <>
-            {/* <div>
-                <div className="flex fleax-columns">
-                    <calendarHeader></calendarHeader>
-                    <div className="flex flex-1"></div>
-                </div>
-            </div> */}
             <React.Fragment>
                 {showEventModal && <EventModal />}
 
@@ -41,3 +35,5 @@ function Calendar() {
 }
 
 export default Calendar
+
+// Change this file
