@@ -30,7 +30,7 @@
     justify-content: flex-end;
 }
 
-header1 {
+.headerA {
     background: var(--white--);
     height: 90px;
     display: flex;

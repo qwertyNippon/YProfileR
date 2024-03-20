@@ -26,7 +26,7 @@ function NavPass() {
     return (
         <>
 
-            <header1 >
+            <div className="headerA">
                 <div className="container">
                     <nav>
                         <div className="logo">
@@ -43,12 +43,12 @@ function NavPass() {
                         <ul>
                             <span className="noShow">
                                 <button className="friendButt"><Link to='#' className="navLinks">refer a friend</Link></button>
-                            </span> 
+                            </span>
                             <Link to='#' className="navLinks"><Icons /></Link>
                         </ul>
                     </nav>
                 </div>
-            </ header1>
+            </div>
                 <hr className="noShow hr"/>
             <header>
                 <div className="noShow" >
