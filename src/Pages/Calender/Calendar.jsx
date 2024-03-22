@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect, useContext } from 'react'
 import { getMonth } from '../../util'
 
-// import "./App.css";
+import "./Calendar.css";
 // import { getMonth } from "./util";
 import CalendarHeader from "../../Components/CalendarHeader";
 import Sidebar from "../../Components/Sidebar";

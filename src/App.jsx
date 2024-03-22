@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import { GlobalStyle } from './Styles/GlobalStyle'
 
+import ContextWrapper from "./context/ContextWrapper";
+
 import './App.css'
 import NavPass from './Components/Nav/NavPass'
 import NavLogin from './Components/Nav/NavLogin'
