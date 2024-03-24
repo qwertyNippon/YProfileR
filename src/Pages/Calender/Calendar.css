@@ -10,12 +10,7 @@
 }
 
 .cal {
-    width: 80%;
-    max-width: 1000px; /* Set a maximum width for larger screens */
     margin: 0 auto; /* Center the container horizontally */
     height: 80vh; /* Take up 80% of the viewport height */
-    /* overflow: auto;  */
     padding: 5px; 
-    /* box-sizing: border-box; Include padding and border in the container's total width and height */
-    /* border: 1px solid #ccc; */
 }
