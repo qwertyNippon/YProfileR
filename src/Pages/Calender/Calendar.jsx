@@ -20,17 +20,19 @@ function Calendar() {
     
     return (
         <>
-            <React.Fragment>
-                {showEventModal && <EventModal />}
+            <div className="cal">
+                <React.Fragment>
+                    {showEventModal && <EventModal />}
 
-                <div className="h-screen flex flex-col">
-                    <CalendarHeader />
-                    <div className="flex flex-1">
-                        <Sidebar />
-                        <Month month={currenMonth} />
+                    <div className="h-screen flex flex-col">
+                        <CalendarHeader />
+                        <div className="flex flex-1">
+                            <Sidebar />
+                            <Month month={currenMonth} />
+                        </div>
                     </div>
-                </div>
-            </React.Fragment>
+                </React.Fragment>
+            </div>
         </>
     )
 }
