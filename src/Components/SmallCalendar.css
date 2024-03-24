@@ -1,0 +1,75 @@
+.mt-9 {
+    margin-top: 2.25rem; /* Margin top of 2.25rem (36px) */
+}
+
+/* Styles for the header element */
+header {
+    display: flex; /* Flex container */
+    justify-content: space-between; /* Space between children */
+}
+
+/* Styles for the paragraph element */
+.text-gray-500 {
+    color: #718096; /* Gray-500 color */
+}
+
+.font-bold {
+    font-weight: 700; /* Bold font weight */
+}
+
+/* Styles for the button element */
+button {
+    background: none; /* Transparent background */
+    border: none; /* No border */
+    cursor: pointer; /* Cursor pointer */
+}
+
+/* Styles for the span element inside the button */
+
+.cursor-pointer {
+    cursor: pointer; /* Cursor pointer */
+}
+
+.text-gray-600 {
+    color: #a0aec0; /* Gray-600 color */
+}
+
+.mx-2 {
+    margin-left: 0.5rem; /* Horizontal margin of 0.5rem (8px) */
+    margin-right: 0.5rem; /* Horizontal margin of 0.5rem (8px) */
+}
+
+/* Styles for the grid container */
+.grid {
+    display: grid; /* Grid container */
+}
+
+/* Define grid columns */
+.grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr)); /* 7 columns with equal width */
+}
+
+/* Define grid rows */
+.grid-rows-6 {
+    grid-template-rows: repeat(6, minmax(0, 1fr)); /* 6 rows with equal height */
+}
+
+/* Styles for the span element */
+.text-sm {
+    font-size: 0.875rem; /* Font size of 0.875rem (14px) */
+}
+
+.py-1 {
+    padding-top: 0.25rem; /* Padding top of 0.25rem (4px) */
+    padding-bottom: 0.25rem; /* Padding bottom of 0.25rem (4px) */
+}
+
+.text-center {
+    text-align: center; /* Text aligned to center */
+}
+
+/* Styles for the button element inside the grid */
+
+.w-full {
+    width: 100%; /* Full width */
+}

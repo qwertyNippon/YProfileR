@@ -1,0 +1,53 @@
+.header {
+    padding: 0.5rem 1rem; /* Padding of 0.5rem (8px) top and bottom, 1rem (16px) left and right */
+    display: flex; /* Flex container */
+    align-items: center; /* Align items vertically center */
+}
+
+/* Styles for the image element inside the header */
+img {
+    margin-right: 0.5rem; /* Margin right of 0.5rem (8px) */
+    width: 3rem; /* Width of 3rem (48px) */
+    height: 3rem; /* Height of 3rem (48px) */
+}
+
+/* Styles for the h1 element inside the header */
+h1 {
+    margin-right: 2.5rem; /* Margin right of 2.5rem (40px) */
+    font-size: 1.5rem; /* Font size of 1.5rem (24px) */
+    color: #718096; /* Gray-500 color */
+    font-weight: 700; /* Bold font weight */
+}
+
+/* Styles for the button elements inside the header */
+button {
+    border: 1px solid transparent; /* 1px solid border */
+    border-radius: 0.25rem; /* 0.25rem (4px) border radius */
+    padding: 0.5rem 1rem; /* Padding of 0.5rem (8px) top and bottom, 1rem (16px) left and right */
+    margin-right: 1.25rem; /* Margin right of 1.25rem (20px) */
+    background-color: transparent; /* Transparent background */
+    cursor: pointer; /* Cursor pointer */
+}
+
+/* Styles for the span element inside the button */
+
+.cursor-pointer {
+    cursor: pointer; /* Cursor pointer */
+}
+
+.text-gray-600 {
+    color: #a0aec0; /* Gray-600 color */
+}
+
+.mx-2 {
+    margin-left: 0.5rem; /* Horizontal margin of 0.5rem (8px) */
+    margin-right: 0.5rem; /* Horizontal margin of 0.5rem (8px) */
+}
+
+/* Styles for the h2 element inside the header */
+h2 {
+    margin-left: 1rem; /* Margin left of 1rem (16px) */
+    font-size: 1.5rem; /* Font size of 1.5rem (24px) */
+    color: #718096; /* Gray-500 color */
+    font-weight: 700; /* Bold font weight */
+}

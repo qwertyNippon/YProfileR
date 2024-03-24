@@ -1,0 +1,25 @@
+.button {
+    border: 1px solid transparent; /* 1px solid border */
+    padding: 0.5rem 1rem; /* Padding of 0.5rem (8px) top and bottom, 1rem (16px) left and right */
+    border-radius: 9999px; /* Large border radius for rounded shape */
+    display: flex; /* Flex container */
+    align-items: center; /* Align items vertically center */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.1); /* Shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+}
+
+.button:hover {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 3px 8px 1px rgba(0, 0, 0, 0.1); /* Larger shadow on hover */
+}
+
+/* Styles for the image element inside the button */
+img {
+    width: 1.75rem; /* Width of 1.75rem (28px) */
+    height: 1.75rem; /* Height of 1.75rem (28px) */
+}
+
+/* Styles for the span element inside the button */
+.span {
+    padding-left: 0.75rem; /* Padding left of 0.75rem (12px) */
+    padding-right: 1.75rem; /* Padding right of 1.75rem (28px) */
+}

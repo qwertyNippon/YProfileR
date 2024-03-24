@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import GlobalContext from "../context/GlobalContext";
+import './Labels.css'
 
 export default function Labels() {
   const { labels, updateLabel } = useContext(GlobalContext);

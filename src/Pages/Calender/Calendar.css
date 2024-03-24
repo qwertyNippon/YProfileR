@@ -1,0 +1,10 @@
+.h-screen {
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flex container */
+    flex-direction: column; /* Arrange children vertically */
+}
+
+.flex {
+    display: flex; /* Flex container */
+    flex: 1; /* Occupy remaining space */
+}

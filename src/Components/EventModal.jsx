@@ -77,7 +77,7 @@ export default function EventModal() {
           </div>
         </header>
         <div className="p-3">
-          <div className="grid grid-cols-1/5 items-end gap-y-7">
+          <div className="grid grid-cols-one-five items-end gap-y-7">
             <div></div>
             <input
               type="text"

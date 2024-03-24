@@ -2,6 +2,8 @@ import dayjs from "dayjs";
 import React, { useContext } from "react";
 import logo from "../assets/logoGoogle.png";
 import GlobalContext from "../context/GlobalContext";
+import './CalendarHeader.css'
+
 export default function CalendarHeader() {
   const { monthIndex, setMonthIndex } = useContext(GlobalContext);
   function handlePrevMonth() {

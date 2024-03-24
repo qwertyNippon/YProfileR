@@ -1,0 +1,190 @@
+.h-screen {
+    height: 100vh; /* Full viewport height */
+}
+
+.w-full {
+    width: 100%; /* Full width */
+}
+
+.fixed {
+    position: fixed; /* Fixed positioning */
+}
+
+.left-0 {
+    left: 0; /* Position at the left edge */
+}
+
+.top-0 {
+    top: 0; /* Position at the top edge */
+}
+
+/* Styles for the form element */
+.bg-white {
+    background-color: #fff; /* White background color */
+}
+
+.rounded-lg {
+    border-radius: 0.5rem; /* 0.5rem (8px) border radius */
+}
+
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Large shadow */
+}
+
+/* Styles for the header element */
+.bg-gray-100 {
+    background-color: #f7fafc; /* Gray-100 background color */
+}
+
+.px-4 {
+    padding-left: 1rem; /* Padding left of 1rem (16px) */
+    padding-right: 1rem; /* Padding right of 1rem (16px) */
+}
+
+.py-2 {
+    padding-top: 0.5rem; /* Padding top of 0.5rem (8px) */
+    padding-bottom: 0.5rem; /* Padding bottom of 0.5rem (8px) */
+}
+
+.justify-between {
+    justify-content: space-between; /* Space between children */
+}
+
+.items-center {
+    align-items: center; /* Align items vertically center */
+}
+
+/* Styles for the span element inside the header */
+
+.text-gray-400 {
+    color: #cbd5e0; /* Gray-400 color */
+}
+
+.cursor-pointer {
+    cursor: pointer; /* Cursor pointer */
+}
+
+.mx-2 {
+    margin-left: 0.5rem; /* Horizontal margin of 0.5rem (8px) */
+    margin-right: 0.5rem; /* Horizontal margin of 0.5rem (8px) */
+}
+
+/* Styles for the button element */
+button {
+    background: none; /* Transparent background */
+    border: none; /* No border */
+    cursor: pointer; /* Cursor pointer */
+}
+
+/* Styles for the div element */
+.p-3 {
+    padding: 0.75rem; /* Padding of 0.75rem (12px) */
+}
+
+.grid {
+    display: grid; /* Grid container */
+}
+
+.grid-cols-one-five {
+    grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5 columns */
+}
+
+.items-end {
+    align-items: flex-end; /* Align items at the end */
+}
+
+.gap-y-7 {
+    gap: 1.75rem; /* Gap between grid items */
+}
+
+/* Styles for the input element */
+
+.pt-3 {
+    padding-top: 0.75rem; /* Padding top of 0.75rem (12px) */
+}
+
+.pb-2 {
+    padding-bottom: 0.5rem; /* Padding bottom of 0.5rem (8px) */
+}
+
+.border-0 {
+    border: none; /* No border */
+}
+
+.text-gray-600 {
+    color: #4a5568; /* Gray-600 color */
+}
+
+.text-xl {
+    font-size: 1.25rem; /* Font size of 1.25rem (20px) */
+}
+
+.font-semibold {
+    font-weight: 600; /* Semi-bold font weight */
+}
+
+.border-b-2 {
+    border-bottom-width: 2px; /* 2px bottom border */
+}
+
+.focus\:outline-none:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+.focus\:ring-0:focus {
+    box-shadow: none; /* Remove focus ring */
+}
+
+.focus\:border-blue-500:focus {
+    border-color: #4299e1; /* Blue-500 border color on focus */
+}
+
+/* Styles for the paragraph element */
+
+/* Styles for the div element inside the form */
+.flex {
+    display: flex; /* Flex container */
+}
+
+.gap-x-2 {
+    gap: 0.5rem; /* Gap between flex items */
+}
+
+/* Add more specific styles for label classes if needed */
+
+/* Styles for the footer element */
+.border-t {
+    border-top: 1px solid #e2e8f0; /* 1px solid border top */
+}
+
+.mt-5 {
+    margin-top: 1.25rem; /* Margin top of 1.25rem (20px) */
+}
+
+/* Styles for the button element inside the footer */
+
+.bg-blue-500 {
+    background-color: #4299e1; /* Blue-500 background color */
+}
+
+.hover\:bg-blue-600:hover {
+    background-color: #3182ce; /* Blue-600 background color on hover */
+}
+
+.px-6 {
+    padding-left: 1.5rem; /* Padding left of 1.5rem (24px) */
+    padding-right: 1.5rem; /* Padding right of 1.5rem (24px) */
+}
+
+.py-2 {
+    padding-top: 0.5rem; /* Padding top of 0.5rem (8px) */
+    padding-bottom: 0.5rem; /* Padding bottom of 0.5rem (8px) */
+}
+
+.rounded {
+    border-radius: 0.25rem; /* 0.25rem (4px) border radius */
+}
+
+.text-white {
+    color: #fff; /* White text color */
+}

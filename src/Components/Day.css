@@ -1,0 +1,85 @@
+.border {
+    border: 1px solid #e2e8f0; /* 1px solid border with gray-200 color */
+}
+
+.border-gray-200 {
+    border-color: #e2e8f0; /* Gray-200 border color */
+}
+
+.flex {
+    display: flex; /* Flex container */
+    /* Add other flex properties as needed */
+}
+
+.flex-col {
+    flex-direction: column; /* Arrange children vertically */
+}
+
+/* Styles for the header element */
+.header {
+    display: flex; /* Flex container */
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center; /* Align items vertically center */
+}
+
+/* Styles for the paragraph element */
+.text-sm {
+    font-size: 0.875rem; /* Font size of 0.875rem (14px) */
+}
+
+.mt-1 {
+    margin-top: 0.25rem; /* Margin top of 0.25rem (4px) */
+}
+
+/* Styles for the p element inside the header */
+.p-1 {
+    padding: 0.25rem; /* Padding of 0.25rem (4px) */
+}
+
+.my-1 {
+    margin-top: 0.25rem; /* Margin top of 0.25rem (4px) */
+    margin-bottom: 0.25rem; /* Margin bottom of 0.25rem (4px) */
+}
+
+/* Styles for the text center */
+.text-center {
+    text-align: center; /* Text aligned to center */
+}
+
+/* Add styles for getCurrentDayClass() if needed */
+
+/* Styles for the div element */
+.flex-1 {
+    flex: 1; /* Occupy remaining space */
+    cursor: pointer; /* Cursor pointer */
+}
+
+/* Styles for the div element inside the container */
+.div {
+    display: flex; /* Flex container */
+    /* Add other flex properties as needed */
+}
+
+/* Styles for the event divs */
+
+.text-gray-600 {
+    color: #4a5568; /* Gray-600 color */
+}
+
+.text-sm {
+    font-size: 0.875rem; /* Font size of 0.875rem (14px) */
+}
+
+.rounded {
+    border-radius: 0.25rem; /* 0.25rem (4px) border radius */
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem; /* Margin bottom of 0.25rem (4px) */
+}
+
+.truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

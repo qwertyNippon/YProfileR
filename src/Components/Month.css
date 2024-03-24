@@ -1,0 +1,18 @@
+.flex-1 {
+    flex: 1; /* Occupy remaining space */
+}
+
+/* Styles for the grid container */
+.grid {
+    display: grid; /* Grid container */
+}
+
+/* Define grid columns */
+.grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr)); /* 7 columns with equal width */
+}
+
+/* Define grid rows */
+.grid-rows-5 {
+    grid-template-rows: repeat(5, minmax(0, 1fr)); /* 5 rows with equal height */
+}

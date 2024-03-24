@@ -1,0 +1,60 @@
+.text-gray-500 {
+    color: #718096; /* Gray-500 color */
+}
+
+.font-bold {
+    font-weight: 700; /* Bold font weight */
+}
+
+.mt-10 {
+    margin-top: 2.5rem; /* Margin top of 2.5rem (40px) */
+}
+
+/* Styles for the label elements */
+.block {
+    display: block; /* Display as block element */
+}
+
+.items-center {
+    align-items: center; /* Align items vertically center */
+}
+
+.mt-3 {
+    margin-top: 0.75rem; /* Margin top of 0.75rem (12px) */
+}
+
+/* Styles for the checkbox input */
+.form-checkbox {
+    appearance: none; /* Remove default checkbox appearance */
+    /* Add other necessary styles */
+}
+
+.h-5 {
+    height: 1.25rem; /* Height of 1.25rem (20px) */
+}
+
+.w-5 {
+    width: 1.25rem; /* Width of 1.25rem (20px) */
+}
+
+/* Change text color based on label */
+.text-red-400 {
+    color: #f56565; /* Red-400 color */
+}
+
+.text-green-400 {
+    color: #48bb78; /* Green-400 color */
+}
+
+/* Styles for the span element */
+.ml-2 {
+    margin-left: 0.5rem; /* Margin left of 0.5rem (8px) */
+}
+
+.text-gray-700 {
+    color: #4a5568; /* Gray-700 color */
+}
+
+.capitalize {
+    text-transform: capitalize; /* Capitalize text */
+}
