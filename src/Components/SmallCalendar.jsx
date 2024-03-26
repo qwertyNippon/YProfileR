@@ -54,12 +54,12 @@ export default function SmallCalendar() {
         <div>
           <button onClick={handlePrevMonth}>
             <span className="material-icons-outlined cursor-pointer text-gray-600 mx-2">
-              chevron_left
+              <i class="fa-solid fa-chevron-left"></i>
             </span>
           </button>
           <button onClick={handleNextMonth}>
             <span className="material-icons-outlined cursor-pointer text-gray-600 mx-2">
-              chevron_right
+              <i class="fa-solid fa-chevron-right"></i>
             </span>
           </button>
         </div>
