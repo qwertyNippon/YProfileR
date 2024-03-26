@@ -11,6 +11,6 @@
 
 .cal {
     margin: 0 auto; /* Center the container horizontally */
-    height: 80vh; /* Take up 80% of the viewport height */
+    height: 70vh; /* Take up 80% of the viewport height */
     padding: 5px; 
 }
