@@ -3,7 +3,6 @@ import { useState, useEffect, useContext } from 'react'
 import { getMonth } from '../../util'
 
 import "./Calendar.css";
-// import { getMonth } from "./util";
 import CalendarHeader from "../../Components/CalendarHeader";
 import Sidebar from "../../Components/Sidebar";
 import Month from "../../Components/Month";
@@ -38,5 +37,3 @@ function Calendar() {
 }
 
 export default Calendar
-
-// Change this file

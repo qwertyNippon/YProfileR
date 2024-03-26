@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import { GlobalStyle } from './Styles/GlobalStyle'
 
+// import { GlobalContext } from './context/GlobalContext'
 import ContextWrapper from "./context/ContextWrapper";
 
 import './App.css'
@@ -27,14 +27,16 @@ function App() {
 
   return (
     <>
-        <NavComponent />
-        <Routes>
-          <Route children path='/' element={<Home />} />
-          <Route children path='/Login' element={<Login />} />
-          <Route children path='/SignUp' element={<SignUp />} />
-          <Route children path='/Calendar' element={<Calendar />} />
-        </Routes>
-        <Footer />
+      <ContextWrapper>
+          <NavComponent />
+          <Routes>
+            <Route children path='/' element={<Home />} />
+            <Route children path='/Login' element={<Login />} />
+            <Route children path='/SignUp' element={<SignUp />} />
+            <Route children path='/Calendar' element={<Calendar />} />
+          </Routes>
+          <Footer />
+      </ContextWrapper>
     </>
   )
 }
