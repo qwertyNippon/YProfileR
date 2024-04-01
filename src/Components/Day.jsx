@@ -27,7 +27,7 @@ export default function Day({ day, rowIdx }) {
   }
   return (
     <div className="border border-gray-200 flex flex-col">
-      <header className="flex flex-col items-center">
+      <header className="header flex flex-col items-center">
         {rowIdx === 0 && (
           <p className="text-sm mt-1">
             {day.format("ddd").toUpperCase()}
@@ -40,7 +40,7 @@ export default function Day({ day, rowIdx }) {
         </p>
       </header>
       <div
-        className="flex-1 cursor-pointer"
+        className="flex-1 cursor-pointer div"
         onClick={() => {
           setDaySelected(day);
           setShowEventModal(true);
@@ -50,7 +50,7 @@ export default function Day({ day, rowIdx }) {
           <div
             key={idx}
             onClick={() => setSelectedEvent(evt)}
-            className={`bg-${evt.label}-200 p-1 mr-3 text-gray-600 text-sm rounded mb-1 truncate`}
+            className={`bg-${evt.label}-200 div p-1 mr-3 text-gray-600 text-sm rounded mb-1 truncate`}
           >
             {evt.title}
           </div>

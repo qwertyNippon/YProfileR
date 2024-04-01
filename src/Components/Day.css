@@ -74,6 +74,23 @@
     border-radius: 0.25rem; /* 0.25rem (4px) border radius */
 }
 
+.bg-blue-600 {
+    background-color: #3b82f6; /* Blue color, change hex code if needed */
+}
+  
+.text-white {
+    color: #ffffff; /* White color */
+ }
+  
+.rounded-full {
+    border-radius: 9999px; /* Makes the element fully rounded */
+}
+  
+.w-7 {
+    width: 1.75rem; /* Equivalent to 7px in Tailwind CSS */
+    /* You may need to adjust the width based on your requirements */
+}
+  
 .mb-1 {
     margin-bottom: 0.25rem; /* Margin bottom of 0.25rem (4px) */
 }
