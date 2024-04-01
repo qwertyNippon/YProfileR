@@ -11,9 +11,10 @@
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: -20rem;
     width: 100%;
+    /* flex-shrink: 0; */
 }
 
 .hr {

@@ -64,7 +64,7 @@ function NavPass() {
                                 <button><Link to='#'>classroom</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link to='#'>calendar</Link></button>
+                                <button><Link to='/Calendar'>calendar</Link></button>
                             </div>
                             <div className="selectOptions">
                                 <button><Link to='#'>statistics</Link></button>
