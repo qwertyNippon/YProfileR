@@ -88,7 +88,7 @@ import React, {
     }
   
     return (
-      <GlobalContext.Provider
+      <GlobalContext.Provider 
         value={{
           monthIndex,
           setMonthIndex,
