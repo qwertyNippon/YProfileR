@@ -81,8 +81,8 @@ function NavPass() {
                         </ul>
                     </nav>
                 </div>
-                <hr className="noShow hr"/>
             </header>
+                <hr className="noShow hr"/>
 
 
                     {/* {!user ? null : 
