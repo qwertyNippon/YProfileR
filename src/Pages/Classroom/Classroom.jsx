@@ -4,7 +4,9 @@ function Classroom() {
     
     return (
         <Classroom >
-
+            <div className="makeCenter">
+                Not Available
+            </div>
         </Classroom>
     )
 }
