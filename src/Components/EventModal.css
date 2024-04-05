@@ -1,5 +1,5 @@
 .h-screen {
-    height: 100vh; /* Full viewport height */
+     /* Full viewport height */
 }
 
 .w-full {
@@ -162,7 +162,8 @@ button {
 
 /* Styles for the footer element */
 .border-t {
-    border-top: 1px solid #e2e8f0; /* 1px solid border top */
+    /* border-top: 1px solid #e2e8f0;  */
+    /* 1px solid border top */
 }
 
 .mt-5 {
@@ -195,4 +196,9 @@ button {
 
 .text-white {
     color: #fff; /* White text color */
+}
+
+.placement {
+    position: relative;
+    top: -20px;
 }

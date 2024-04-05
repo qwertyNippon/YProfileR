@@ -125,7 +125,7 @@ export default function EventModal() {
             </div>
           </div>
         </div>
-        <footer className="flex justify-end border-t p-3 mt-5">
+        <footer className="flex justify-end border-t p-3 mt-5 placement">
           <button
             type="submit"
             onClick={handleSubmit}
