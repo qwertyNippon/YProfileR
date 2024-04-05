@@ -1,4 +1,4 @@
-.header {
+header {
     padding: 0.5rem 1rem; /* Padding of 0.5rem (8px) top and bottom, 1rem (16px) left and right */
     display: flex; /* Flex container */
     align-items: center; /* Align items vertically center */
@@ -51,3 +51,49 @@ h2 {
     color: #718096; /* Gray-500 color */
     font-weight: 700; /* Bold font weight */
 }
+
+.px-4 {
+    padding-left: 1rem; /* Equivalent to 4px in Tailwind CSS */
+    padding-right: 1rem; /* Equivalent to 4px in Tailwind CSS */
+  }
+  
+  .py-2 {
+    padding-top: 0.5rem; /* Equivalent to 2px in Tailwind CSS */
+    padding-bottom: 0.5rem; /* Equivalent to 2px in Tailwind CSS */
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+
+  .mr-2 {
+    margin-right: 0.5rem; /* Equivalent to 2px in Tailwind CSS */
+  }
+  
+  .w-12 {
+    width: 3rem; /* Equivalent to 12px in Tailwind CSS */
+  }
+  
+  .h-12 {
+    height: 3rem; /* Equivalent to 12px in Tailwind CSS */
+  }
+
+  .mr-10 {
+    margin-right: 2.5rem; /* Equivalent to 10px in Tailwind CSS */
+  }
+  
+  .text-xl {
+    font-size: 1.25rem; /* Equivalent to 20px in Tailwind CSS */
+  }
+  
+  .text-gray-500 {
+    color: #6b7280; /* Equivalent gray color in Tailwind CSS */
+  }
+  
+  .font-bold {
+    font-weight: 700; /* Equivalent to bold in Tailwind CSS */
+  }
