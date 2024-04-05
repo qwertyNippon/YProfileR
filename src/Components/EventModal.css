@@ -27,6 +27,10 @@
     border-radius: 0.5rem; /* 0.5rem (8px) border radius */
 }
 
+.w-1-2 {
+    width: 50%; /* 1/4 of the parent container's width */
+  }
+
 .shadow-2xl {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Large shadow */
 }
@@ -145,6 +149,10 @@ button {
 .flex {
     display: flex; /* Flex container */
 }
+
+.justify-center {
+    justify-content: center;
+  }
 
 .gap-x-2 {
     gap: 0.5rem; /* Gap between flex items */
