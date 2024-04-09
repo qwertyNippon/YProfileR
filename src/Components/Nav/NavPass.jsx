@@ -30,7 +30,7 @@ function NavPass() {
                 <div className="container">
                     <nav>
                         <div className="logo">
-                            <a href="#"><img className="LogoPic" src={Logo} alt="Logo" /></a>
+                            <a href="/Home"><img className="LogoPic" src={Logo} alt="Logo" /></a>
                         </div>
                         <ul>
                             <Link to="/Home"><p className="navLinks">Dashboard</p></Link>
