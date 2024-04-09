@@ -33,8 +33,8 @@ function NavPass() {
                             <a href="#"><img className="LogoPic" src={Logo} alt="Logo" /></a>
                         </div>
                         <ul>
-                            <Link to="{{ url_for('home') }}"><p className="navLinks">Dashboard</p></Link>
-                            <Link to='#'><p className="navLinks">Find a Teacher</p></Link>
+                            <Link to="/Home"><p className="navLinks">Dashboard</p></Link>
+                            <Link to='/FindTeacher'><p className="navLinks">Find a Teacher</p></Link>
                         </ul>
                     </nav>
                 </ div>
@@ -55,10 +55,10 @@ function NavPass() {
                     <nav>
                         <ul>
                             <div className="selectOptions">
-                                <button><Link to='#'>messages</Link></button>
+                                <button><Link to='/MyMessages'>messages</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link to='#'>my lessons</Link></button>
+                                <button><Link to='/MyLessons'>lessons</Link></button>
                             </div>
                             <div className="selectOptions">
                                 <button><Link to='/Classroom'>classroom</Link></button>
@@ -67,16 +67,16 @@ function NavPass() {
                                 <button><Link to='/Calendar'>calendar</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link to='#'>statistics</Link></button>
+                                <button><Link to='/Statistics'>statistics</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link to='#'>my profile</Link></button>
+                                <button><Link to='/Profile'>profile</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link to='#'>settings</Link></button>
+                                <button><Link to='/Settings'>settings</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link to='#'>community</Link></button>
+                                <button><Link to='/Community'>community</Link></button>
                             </div>
                         </ul>
                     </nav>

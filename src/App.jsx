@@ -19,6 +19,7 @@ import Statistics from './Pages/Statistics/Statistics'
 import Profile from './Pages/Profile/Profile'
 import Settings from './Pages/Settings/Settings'
 import Community from './Pages/Community/Community'
+import FindTeacher from './Pages/FindTeacher/FindTeacher'
 
 function App() {
   const [currentUrl, setCurrentUrl] = useState(window.location.href);
@@ -48,6 +49,8 @@ function App() {
             <Route children path='/Profile' element={<Profile />} />
             <Route children path='/Settings' element={<Settings />} />
             <Route children path='/Community' element={<Community />} />
+            <Route children path='/FindTeacher' element={<FindTeacher />} />
+            <Route children path='/Home' element={<Home />} />
           </Routes>
           <Footer />
       </ContextWrapper>
