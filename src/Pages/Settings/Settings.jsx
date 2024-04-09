@@ -3,8 +3,10 @@ import React from "react";
 function Settings() {
     
     return (
-        <Settings >
-            Settings
+        <Settings>
+            <div className="makeCenter">
+                Not Available
+            </div>
         </Settings>
     )
 }

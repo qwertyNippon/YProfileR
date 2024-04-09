@@ -4,7 +4,9 @@ function FindTeacher() {
     
     return (
         < >
-            FindTeacher
+            <div className="makeCenter">
+                Not Available
+            </div>
         </>
     )
 }

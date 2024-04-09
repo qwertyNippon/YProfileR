@@ -5,8 +5,9 @@ function Home() {
     
     return (
         <>
-        Home
-        <div className="test">asdfghjkl</div>
+            <div className="makeCenter">
+                Not Available
+            </div>
         </>
     )
 }

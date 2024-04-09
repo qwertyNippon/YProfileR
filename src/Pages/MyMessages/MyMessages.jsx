@@ -4,7 +4,9 @@ function MyMessages() {
     
     return (
         < >
-            MyMessages
+            <div className="makeCenter">
+                Not Available
+            </div>
         </>
     )
 }

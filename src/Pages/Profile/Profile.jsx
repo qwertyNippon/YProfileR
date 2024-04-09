@@ -4,7 +4,9 @@ function Profile() {
     
     return (
         < >
-            Profile
+            <div className="makeCenter">
+                Not Available
+            </div>
         </>
     )
 }

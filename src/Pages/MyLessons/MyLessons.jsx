@@ -4,7 +4,9 @@ function MyLessons() {
     
     return (
         < >
-            MyLessons
+            <div className="makeCenter">
+                Not Available
+            </div>
         </>
     )
 }

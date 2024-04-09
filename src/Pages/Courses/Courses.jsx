@@ -3,8 +3,10 @@ import React from "react";
 function Courses() {
     
     return (
-        <Courses >
-            Courses
+        <Courses>
+            <div className="makeCenter">
+                Not Available
+            </div>
         </Courses>
     )
 }

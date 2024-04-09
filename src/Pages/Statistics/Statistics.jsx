@@ -4,15 +4,12 @@ import React from "react";
 function Button() {
     
     return (
-        <ButtonStyled >
-
-        </ButtonStyled>
+        <>
+            <div className="makeCenter">
+                Not Available
+            </div>
+        </>
     )
 }
-
-// const ButtonStyled = styled.button`
-//     display: flex;
-//     align-items: center;
-// `;
 
 export default Button

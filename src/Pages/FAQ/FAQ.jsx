@@ -3,8 +3,10 @@ import React from "react";
 function FAQ() {
     
     return (
-        <FAQ >
-            FAQ
+        <FAQ>
+            <div className="makeCenter">
+                Not Available
+            </div>
         </FAQ>
     )
 }
