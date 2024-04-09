@@ -1,7 +1,7 @@
 import React from "react";
 // import { styled } from "styled-components";
 
-function Button() {
+function Statistics() {
     
     return (
         <>
@@ -12,4 +12,4 @@ function Button() {
     )
 }
 
-export default Button
+export default Statistics
