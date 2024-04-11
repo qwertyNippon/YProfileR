@@ -24,6 +24,7 @@ function Profile() {
                                 <h3>Introduce yourself</h3>
                                 <h3>Language experience</h3>
                                 <h1>Certificates/Qualifications</h1>
+                                <p>qwertyuikmnbvfghnbvfghb</p>
                             </div>
                         </div>
                     </div>
