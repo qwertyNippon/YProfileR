@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { DataContext } from "/Users/orlan/OneDrive/Documents/PostCodingTemple/OnlineLanguagePro/YProfileR/YuriProfileReact/src/context/DataProvider";
@@ -19,6 +20,8 @@ function NavPass() {
     //     console.log(data)
     // }
 
+    const { t} = useTranslation()
+
     const logout = () => {
         setUser(null)
       }
@@ -33,8 +36,8 @@ function NavPass() {
                             <a href="/Home"><img className="LogoPic" src={Logo} alt="Logo" /></a>
                         </div>
                         <ul>
-                            <Link to="/Home"><p className="navLinks">Dashboard</p></Link>
-                            <Link to='/FindTeacher'><p className="navLinks">Find a Teacher</p></Link>
+                            <Link to="/Home"><p className="navLinks">{t('Dashboard')}</p></Link>
+                            <Link to='/FindTeacher'><p className="navLinks">{t('FindT')}</p></Link>
                         </ul>
                     </nav>
                 </ div>
@@ -55,28 +58,28 @@ function NavPass() {
                     <nav>
                         <ul>
                             <div className="selectOptions">
-                                <button><Link to='/MyMessages'>messages</Link></button>
+                                <button><Link to='/MyMessages'>{t('messages')}</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link to='/MyLessons'>lessons</Link></button>
+                                <button><Link to='/MyLessons'>{t('lessons')}</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link to='/Classroom'>classroom</Link></button>
+                                <button><Link to='/Classroom'>{t('classroom')}</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link to='/Calendar'>calendar</Link></button>
+                                <button><Link to='/Calendar'>{t('calendar')}</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link to='/Statistics'>statistics</Link></button>
+                                <button><Link to='/Statistics'>{t('statistics')}</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link to='/Profile'>profile</Link></button>
+                                <button><Link to='/Profile'>{t('profile')}</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link to='/Settings'>settings</Link></button>
+                                <button><Link to='/Settings'>{t('settings')}</Link></button>
                             </div>
                             <div className="selectOptions">
-                                <button><Link to='/Community'>community</Link></button>
+                                <button><Link to='/Community'>{t('community')}</Link></button>
                             </div>
                         </ul>
                     </nav>
