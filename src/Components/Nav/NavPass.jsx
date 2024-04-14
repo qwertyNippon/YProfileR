@@ -45,7 +45,7 @@ function NavPass() {
                     <nav>
                         <ul>
                             <span className="noShow">
-                                <button className="friendButt"><Link to='#' className="navLinks">refer a friend</Link></button>
+                                <button className="friendButt"><Link to='#' className="navLinks">{t('referF')}</Link></button>
                             </span>
                             <Link to='#' className="navLinks"><Icons /></Link>
                         </ul>

@@ -4,7 +4,7 @@ import { initReactI18next } from "react-i18next";
 
 i18next.use(LanguageDetector).use(initReactI18next).init({
     debug: true,
-    fallbackLng: 'es',
+    fallbackLng: 'en',
     resources: {
         en: {
             translation: {
@@ -18,6 +18,7 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 community: 'community',
                 Dashboard: 'Dashboard',
                 FindT: 'Find a Teacher',
+                referF: 'refer a friend',
             },
         },
         es: {
@@ -32,6 +33,7 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 community: 'comunidad',
                 Dashboard: 'Panel',
                 FindT: 'Encontrar un profeso',
+                referF: 'recomendar a un amigo',
             },
 
         },
@@ -47,6 +49,7 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 community: 'communauté',
                 Dashboard: 'Tableau de bord',
                 FindT: 'Trouver un professeur',
+                referF: 'référez un ami',
             },
         },
     },
