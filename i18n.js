@@ -55,4 +55,4 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
     },
 })
 
-// notes 8:10 - 
+// notes 9:30 - 
