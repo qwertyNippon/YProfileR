@@ -18,8 +18,8 @@ function Profile() {
                 <div className="headerProfile">
                     <div className="container">
                         <nav>
-                            <div className="logo">
-                                <a href="#"><span>UserName</span></a>
+                            <div className="logo makeCenter">
+                                <h1><span>UserName</span></h1>
                             </div>
                         </nav>
                     </div>
