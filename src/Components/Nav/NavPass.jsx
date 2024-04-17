@@ -28,6 +28,12 @@ function NavPass() {
         setUser(null)
       }
 
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+    };
+
     return (
         <>
 
@@ -46,11 +52,19 @@ function NavPass() {
                 <div className="">
                     <nav>
                         <ul>
-                            <div id="Lang">
+                            <div className="lang-container">
                                 <Link to='#' className="navLinks"><LanguageIcons /></Link>
-                                <Link to='#' className="navLinks"><ArrowDownIcons /></Link>
+                                <Link to='#' className="navLinks" onClick={toggleDropdown}><ArrowDownIcons /></Link>
+                                {isDropdownOpen && (
+                                    <div className="dropdown-menu">
+                                        <ul>
+                                            <li>English</li>
+                                            <li>Spanish</li>
+                                            <li>French</li>
+                                        </ul>
+                                    </div>
+                                )}
                             </div>
-
                             <span className="noShow">
                                 <button className="friendButt"><Link to='#' className="navLinks">{t('referF')}</Link></button>
                             </span>

@@ -149,3 +149,44 @@ a {
         display: none;
     }
 }
+
+.lang-container {
+    display: flex;
+  }
+  
+  .lang-container > .navLinks {
+    margin-right: 5px;
+  }
+
+  .lang-container {
+    position: relative; /* Needed for absolute positioning of the dropdown menu */
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -50%;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 5px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 7px;
+  }
+  
+  .dropdown-menu ul {
+    list-style: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+  }
+
+  .dropdown-menu ul li:hover {
+    background-color: var(--color-accent);
+    border-radius: 7px;
+
+  }
+  
+  .dropdown-menu li {
+    padding: 0px 5px;
+  }
