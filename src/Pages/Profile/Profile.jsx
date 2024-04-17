@@ -48,7 +48,7 @@ function Profile() {
                                             <textarea className="text-input-Intro"
                                                 value={text}
                                                 onChange={handleChange}
-                                                style={{ height: textareaHeight }}
+                                                style={{ height: textareaHeight, overflow: "hidden"}}
                                                 placeholder="Introduce Yourself"
                                             />
                                         </div>
