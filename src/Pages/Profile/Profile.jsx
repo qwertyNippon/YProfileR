@@ -18,7 +18,7 @@ function Profile() {
                 <div className="headerProfile">
                     <div className="container">
                         <nav>
-                            <div className="logo makeCenter">
+                            <div className="logo">
                                 <h1><span>UserName</span></h1>
                             </div>
                         </nav>
