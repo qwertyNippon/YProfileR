@@ -69,3 +69,34 @@
         padding: 30px;
     } */
 }
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .text-input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 300px;
+  }
+  .text-input-Intro {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 300px;
+  }
+  
+  .text-input:focus {
+    outline: none;
+    border-color: dodgerblue;
+  } 
+ .text-input-Intro:focus {
+    outline: none;
+    border-color: dodgerblue;
+  }
