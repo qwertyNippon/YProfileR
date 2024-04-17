@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import { DataContext } from "/Users/orlan/OneDrive/Documents/PostCodingTemple/OnlineLanguagePro/YProfileR/YuriProfileReact/src/context/DataProvider";
 import Icons from '../Icons/Profile_icons';
 import ArrowDownIcons from '../Icons/ArrowDown_icons';
+import LanguageIcons from '../Icons/Langauge_icons';
 import './NavPass.css';
 import Logo from '../../assets/Logo.png'
 
@@ -45,8 +46,10 @@ function NavPass() {
                 <div className="">
                     <nav>
                         <ul>
-                            <Link to='#' className="navLinks"><Icons /></Link>
-                            <Link to='#' className="navLinks"><ArrowDownIcons /></Link>
+                            <div id="Lang">
+                                <Link to='#' className="navLinks"><LanguageIcons /></Link>
+                                <Link to='#' className="navLinks"><ArrowDownIcons /></Link>
+                            </div>
 
                             <span className="noShow">
                                 <button className="friendButt"><Link to='#' className="navLinks">{t('referF')}</Link></button>
