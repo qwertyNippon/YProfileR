@@ -7,7 +7,8 @@ import Icons from '../Icons/Profile_icons';
 import ArrowDownIcons from '../Icons/ArrowDown_icons';
 import LanguageIcons from '../Icons/Langauge_icons';
 import './NavPass.css';
-import Logo from '../../assets/Logo.png'
+import Logo from '../../assets/Logo.png';
+import i18next from 'i18next';
 
 function NavPass() {
     const { user, setUser } = useContext(DataContext);
@@ -34,6 +35,11 @@ function NavPass() {
     setIsDropdownOpen(!isDropdownOpen);
     };
 
+    const changeLanguage = (language) => {
+        i18next.changeLanguage(language);
+        setIsDropdownOpen(false); // Close dropdown after changing language
+      };
+
     return (
         <>
 
@@ -58,9 +64,9 @@ function NavPass() {
                                 {isDropdownOpen && (
                                     <div className="dropdown-menu">
                                         <ul>
-                                            <li>English</li>
-                                            <li>Spanish</li>
-                                            <li>French</li>
+                                            <li onClick={() => changeLanguage('en')}>English</li>
+                                            <li onClick={() => changeLanguage('es')}>Spanish</li>
+                                            <li onClick={() => changeLanguage('fr')}>French</li>
                                         </ul>
                                     </div>
                                 )}
