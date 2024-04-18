@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import GlobalContext from "../context/GlobalContext";
 import './EventModal.css';
+import { useTranslation } from "react-i18next";
 
 const labelsClasses = [
   "indigo",
@@ -12,6 +13,9 @@ const labelsClasses = [
 ];
 
 export default function EventModal() {
+
+  const { t} = useTranslation()
+
   const {
     setShowEventModal,
     daySelected,
@@ -53,7 +57,7 @@ export default function EventModal() {
       <form className="bg-white rounded-lg shadow-2xl w-1-2">
         <header className="bg-gray-100 px-4 py-2 flex justify-between items-center">
           <span className="material-icons-outlined text-gray-400">
-            drag_handle
+            {t('drag_handle')}
           </span>
           <div>
             {selectedEvent && (
@@ -67,12 +71,12 @@ export default function EventModal() {
                 }}
                 className="material-icons-outlined text-gray-400 cursor-pointer"
               >
-                delete
+                {t('delete')}
               </span>
             )}
             <button onClick={() => setShowEventModal(false)}>
               <span className="material-icons-outlined text-gray-400">
-                close
+                {t('close')}
               </span>
             </button>
           </div>
@@ -90,11 +94,11 @@ export default function EventModal() {
               onChange={(e) => setTitle(e.target.value)}
             />
             <span className="material-icons-outlined text-gray-400">
-              schedule
+              {t('schedule')}
             </span>
             <p>{daySelected.format("dddd, MMMM DD")}</p>
             <span className="material-icons-outlined text-gray-400">
-              segment
+              {t('segment')}
             </span>
             <input
               type="text"
@@ -106,7 +110,7 @@ export default function EventModal() {
               onChange={(e) => setDescription(e.target.value)}
             />
             <span className="material-icons-outlined text-gray-400">
-              bookmark_border
+              {t('bookmark_border')}
             </span>
             <div className="flex gap-x-2">
               {labelsClasses.map((lblClass, i) => (
@@ -117,7 +121,7 @@ export default function EventModal() {
                 >
                   {selectedLabel === lblClass && (
                     <span className="material-icons-outlined text-white text-sm">
-                      check
+                      {t('check')}
                     </span>
                   )}
                 </span>
@@ -131,7 +135,7 @@ export default function EventModal() {
             onClick={handleSubmit}
             className="bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded text-white"
           >
-            Save
+            {t('Save')}
           </button>
         </footer>
       </form>
