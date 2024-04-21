@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import LanguageSelection from '../../Components/Language/LanguageSelection';
+// import LanguageColumn from '../../Components/Language/LanguageColumn';
 import './Profile.css'
 
 function Profile() {
 
     const { t} = useTranslation()
+
+    // const LanguageColumn = ({ languages })
 
     const [text, setText] = useState("");
     const [textareaHeight, setTextareaHeight] = useState("63px");
@@ -60,13 +64,21 @@ function Profile() {
                                 
                                 <h3>{t('LanguageExperience')}</h3>
 
-                                <h5 className="addLan">add another language</h5>
+                                <h5 className="addLan">{t('addAnLan')}</h5>
                                 <div>
                                     <div></div>
                                     <div></div>
                                 </div>
                                 <h1>{t('CertificatesQualifications')}</h1>
                                 <p>qwertyuikmnbvfghnbvfghb</p>
+                                <div>
+                                    <h1>Test</h1>
+                                    <button>Click to N/A</button>
+                                </div>
+                                {/* ************ */}
+                                <LanguageSelection />
+                                {/* <LanguageDisplay /> */}
+
 
 
 
