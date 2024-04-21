@@ -61,6 +61,10 @@ function Profile() {
                                 <h3>{t('LanguageExperience')}</h3>
 
                                 <h5 className="addLan">add another language</h5>
+                                <div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
                                 <h1>{t('CertificatesQualifications')}</h1>
                                 <p>qwertyuikmnbvfghnbvfghb</p>
 
