@@ -28,7 +28,11 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 segment: 'segment',
                 bookmark_border: 'bookmark_border',
                 check: 'check',
-                Save: 'Save'
+                Username: 'Username',
+                Price: 'Price',
+                IntroduceYourself: 'Introduce Yourself',
+                LanguageExperience: 'Language Experience',
+                CertificatesQualifications: 'Certificates/Qualifications',
             },
         },
         es: {
@@ -53,7 +57,12 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 segment: 'segmento',
                 bookmark_border: 'marcador_border',
                 check: 'controlar',
-                Save: 'Ahorrar'
+                Save: 'Ahorrar',
+                Username: 'Nombre de usuario',
+                Price: 'Precio',
+                IntroduceYourself: 'Preséntate',
+                LanguageExperience: 'Experiencia Lingüística',
+                CertificatesQualifications: 'Certificados/Cualificaciones',
             },
 
         },
@@ -79,7 +88,12 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 segment: 'segment',
                 bookmark_border: 'bookmark_border',
                 check: 'vérifier',
-                Save: 'Sauvegarderave'
+                Save: 'Sauvegarderave',
+                Username: "Nom d'utilisateur",
+                Price: 'Prix',
+                IntroduceYourself: 'Présentez-vous',
+                LanguageExperience: 'Expérience linguistique',
+                CertificatesQualifications: 'Certificats/Qualifications',
             },
         },
     },

@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import './Profile.css'
 
 function Profile() {
+
+    const { t} = useTranslation()
 
     const [text, setText] = useState("");
     const [textareaHeight, setTextareaHeight] = useState("63px");
@@ -19,7 +22,7 @@ function Profile() {
                     <div className="container">
                         <nav>
                             <div className="logo">
-                                <h1><span>UserName</span></h1>
+                                <h1><span>{t('Username')}</span></h1>
                             </div>
                         </nav>
                     </div>
@@ -29,7 +32,7 @@ function Profile() {
                     <div className="container">
                         <div className="home-info">
                             <div className="makeCenter">
-                                <h3>Price</h3>
+                                <h3>{t('Price')}</h3>
 
                                 <div className="input-container">
                                     <input
@@ -42,7 +45,7 @@ function Profile() {
                                         placeholder="Last Name"
                                         className="text-input"
                                     />
-                                <h3 className="makeCenter">Introduce yourself</h3>
+                                <h3 className="makeCenter">{t('IntroduceYourself')}</h3>
                                     <div className="" >
                                         <div>
                                             <textarea className="text-input-Intro"
@@ -55,8 +58,8 @@ function Profile() {
                                     </div>
                                 </div>
                                 
-                                <h3>Language experience</h3>
-                                <h1>Certificates/Qualifications</h1>
+                                <h3>{t('LanguageExperience')}</h3>
+                                <h1>{t('CertificatesQualifications')}</h1>
                                 <p>qwertyuikmnbvfghnbvfghb</p>
 
 
