@@ -9,20 +9,24 @@ import LanguageIcons from '../Icons/Langauge_icons';
 import './NavPass.css';
 import Logo from '../../assets/Logo.png';
 import i18next from 'i18next';
+import LanguageSelection from '../Language/LanguageSelection'
+
 
 function NavPass() {
+    const [Language, setLanguage] = useState([{ language: fallbackLanguage}]);
     const { user, setUser } = useContext(DataContext);
     // const get_info = async () => {
-    //     const url = 'http://127.0.0.1:5000/api/API'
+        //     const url = 'http://127.0.0.1:5000/api/API'
         // will need 2 change above
-    //     const response = await axios.get(url) 
-    //     return response.status === 200 ? response.data : null
-    // }
-    // const users_name = async () => {
-    //     const data = await get_info()
-    //     console.log(data)
-    // }
-
+        //     const response = await axios.get(url) 
+        //     return response.status === 200 ? response.data : null
+        // }
+        // const users_name = async () => {
+            //     const data = await get_info()
+            //     console.log(data)
+            // }
+            
+    var fallbackLanguage = i18next.options.resources[0]; // Extract language code
     const { t} = useTranslation()
 
     const logout = () => {
@@ -64,11 +68,12 @@ function NavPass() {
                                 {isDropdownOpen && (
                                     <div className="dropdown-menu">
                                         <ul>
-                                            <li onClick={() => changeLanguage('en')}>English</li>
-                                            <li onClick={() => changeLanguage('es')}>Spanish</li>
-                                            <li onClick={() => changeLanguage('fr')}>French</li>
+                                            <li onClick={() => {changeLanguage('en'); LanguageSelection(fallbackLanguage = i18next.options.resources[0]);}}>English</li>
+                                            <li onClick={() => {changeLanguage('es'); LanguageSelection(fallbackLanguage = i18next.options.resources[1]);}}>Spanish</li>
+                                            <li onClick={() => {changeLanguage('fr'); LanguageSelection(fallbackLanguage = i18next.options.resources[2]);}}>French</li>
                                         </ul>
                                     </div>
+                                    // the default is set as english, need to find a way to change it with each click
                                 )}
                             </div>
                             <span className="noShow">
