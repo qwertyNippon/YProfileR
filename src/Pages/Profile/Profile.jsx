@@ -11,11 +11,18 @@ function Profile() {
     // const LanguageColumn = ({ languages })
 
     const [text, setText] = useState("");
+    const [textCertz, setTextCertz] = useState("");
     const [textareaHeight, setTextareaHeight] = useState("63px");
+    const [textareaHeightCertz, setTextareaHeightCertz] = useState("63px");
   
     const handleChange = (event) => {
       setText(event.target.value);
       setTextareaHeight(`${event.target.scrollHeight}px`);
+      };
+
+    const handleChangeCertz = (event) => {
+      setTextCertz(event.target.value);
+      setTextareaHeightCertz(`${event.target.scrollHeight}px`);
       };
 
     
@@ -63,20 +70,24 @@ function Profile() {
                                 </div>
                                 
                                 <h3>{t('LanguageExperience')}</h3>
-
-                                <h5 className="addLan">{t('addAnLan')}</h5>
-                                <div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <h1>{t('CertificatesQualifications')}</h1>
-                                <p>qwertyuikmnbvfghnbvfghb</p>
-                                <div>
-                                    <h1>Test</h1>
-                                    <button>Click to N/A</button>
-                                </div>
-                                {/* ************ */}
                                 <LanguageSelection />
+
+                                <div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <h3>{t('CertificatesQualifications')}</h3>
+                                <div className="" >
+                                        <div>
+                                            <textarea className="text-input-Intro"
+                                                value={textCertz}
+                                                onChange={handleChangeCertz}
+                                                style={{ height: textareaHeightCertz, overflow: "hidden"}}
+                                                placeholder="List Certificates/Qualifications
+                                                "
+                                            />
+                                        </div>
+                                    </div>
                                 {/* <LanguageDisplay /> */}
 
 

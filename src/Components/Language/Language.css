@@ -24,7 +24,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    width: 150px;
+    width: 125px;
   }
 
 .text-inputLan:focus {
@@ -35,4 +35,13 @@
 .listLan {
     list-style-type: none;
     margin-left: 5px;
+}
+
+.abso {
+    position: absolute;
+}
+
+.plusBut {
+    /* position: relative; */
+    margin-right: 5px;
 }

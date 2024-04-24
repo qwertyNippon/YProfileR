@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 import i18next from 'i18next';
+import Trash_icons from '../Icons/Trash_icons';
+import Edit_icons from '../Icons/Edit_icons';
+import Plus_icons from '../Icons/Plus_icons';
 import NavPass from '../Nav/NavPass';
 import './Language.css';
 
@@ -41,16 +44,27 @@ const LanguageSelection = () => {
 
     return (
         <div>
-            <h2 className='makeCenter'>Language Selection</h2>
-            <ul className='listLan makeCenter'>
-                {languages.map((lang, index) => (
-                    <li key={index}>
-                        {lang.language} - {lang.level}
-                        <button onClick={() => deleteLanguage(index)}>{t('Delete')}</button>
-                        <button onClick={() => editLanguage(index, prompt('Enter new language:'), prompt('Enter new level:'))}>Edit</button>
-                    </li>
-                ))}
-            </ul>
+            <table className='makeCenter'>
+                {/* <thead>
+                    <tr>
+                        <th>Language</th>
+                        <th>Level</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead> */}
+                <tbody>
+                    {languages.map((lang, index) => (
+                        <tr key={index}>
+                            <td>{lang.language === "en" ? t('Language ') : lang.language}&nbsp;&nbsp;</td>
+                            <td>{lang.level}</td>
+                            <td>
+                                <button onClick={() => deleteLanguage(index)}><Trash_icons /></button>
+                                <button onClick={() => editLanguage(index, prompt('Enter new language:'), prompt('Enter new level:'))}><Edit_icons /></button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
             <div className=''>
                 <input className='text-inputLan'
                     type="text"
@@ -58,13 +72,13 @@ const LanguageSelection = () => {
                     value={newLanguage}
                     onChange={(e) => setNewLanguage(e.target.value)}
                 />
-                <input className='text-inputLan'
+                <input className='text-inputLan '
                     type="text"
                     placeholder="Level"
                     value={newLevel}
                     onChange={(e) => setNewLevel(e.target.value)}
                 />
-                <button onClick={addLanguage}>{t('addAnLan')}</button>
+                <button className='plusBut' onClick={addLanguage}><Plus_icons /></button>
             </div>
         </div>
     );

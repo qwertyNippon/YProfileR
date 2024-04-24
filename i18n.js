@@ -34,7 +34,7 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 IntroduceYourself: 'Introduce Yourself',
                 LanguageExperience: 'Language Experience',
                 CertificatesQualifications: 'Certificates/Qualifications',
-                addAnLan: 'add another Language',
+                Language: 'English',
             },
         },
         es: {
@@ -66,7 +66,7 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 IntroduceYourself: 'Preséntate',
                 LanguageExperience: 'Experiencia Lingüística',
                 CertificatesQualifications: 'Certificados/Cualificaciones',
-                addAnLan: 'añadir otro idioma',
+                Language: 'Spanish',
             },
 
         },
@@ -99,7 +99,7 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 IntroduceYourself: 'Présentez-vous',
                 LanguageExperience: 'Expérience linguistique',
                 CertificatesQualifications: 'Certificats/Qualifications',
-                addAnLan: 'ajouter une autre langue',
+                Language: 'French',
             },
         },
     },
