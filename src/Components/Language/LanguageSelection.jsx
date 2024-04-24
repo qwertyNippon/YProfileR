@@ -55,7 +55,7 @@ const LanguageSelection = () => {
                 <tbody>
                     {languages.map((lang, index) => (
                         <tr key={index}>
-                            <td>{lang.language === "en" ? t('Language ') : lang.language}&nbsp;&nbsp;</td>
+                            <td>{lang.language === "en" ? t('Language') : lang.language}&nbsp;&nbsp;</td>
                             <td>{lang.level}</td>
                             <td>
                                 <button onClick={() => deleteLanguage(index)}><Trash_icons /></button>
