@@ -40,6 +40,7 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 FName: 'First Name',
                 LName: 'Last Name',
                 Level: 'Level',
+                Native: 'Native'
 
             },
         },
@@ -78,6 +79,7 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 FName: 'Nombre de pila',
                 LName: 'Apellido',
                 Level: 'Nivel',
+                Native: 'Nativo',
             },
 
         },
@@ -116,6 +118,7 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 FName: 'Prénom',
                 LName: 'Nom de famille',
                 Level: 'Niveau',
+                Native: 'Indigène',
             },
         },
     },
