@@ -48,12 +48,12 @@ function Profile() {
                                 <div className="input-container">
                                     <input
                                         type="text"
-                                        placeholder="First Name"
+                                        placeholder={t('FName')}
                                         className="text-input"
                                     />
                                     <input
                                         type="text"
-                                        placeholder="Last Name"
+                                        placeholder={t('LName')}
                                         className="text-input"
                                     />
                                 <h3 className="makeCenter">{t('IntroduceYourself')}</h3>
@@ -63,7 +63,7 @@ function Profile() {
                                                 value={text}
                                                 onChange={handleChange}
                                                 style={{ height: textareaHeight, overflow: "hidden"}}
-                                                placeholder="Introduce Yourself"
+                                                placeholder={t('IntroduceYourself')}
                                             />
                                         </div>
                                     </div>
@@ -83,8 +83,7 @@ function Profile() {
                                                 value={textCertz}
                                                 onChange={handleChangeCertz}
                                                 style={{ height: textareaHeightCertz, overflow: "hidden"}}
-                                                placeholder="List Certificates/Qualifications
-                                                "
+                                                placeholder={t('LstCertz')}
                                             />
                                         </div>
                                     </div>

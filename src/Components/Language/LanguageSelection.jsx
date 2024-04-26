@@ -68,13 +68,13 @@ const LanguageSelection = () => {
             <div className=''>
                 <input className='text-inputLan'
                     type="text"
-                    placeholder="Language"
+                    placeholder={t('Lang')}
                     value={newLanguage}
                     onChange={(e) => setNewLanguage(e.target.value)}
                 />
                 <input className='text-inputLan '
                     type="text"
-                    placeholder="Level"
+                    placeholder={t('Level')}
                     value={newLevel}
                     onChange={(e) => setNewLevel(e.target.value)}
                 />
