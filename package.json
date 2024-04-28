@@ -22,6 +22,7 @@
     "i18next": "^23.11.1",
     "i18next-browser-languagedetector": "^7.2.1",
     "moment": "^2.29.4",
+    "peerjs": "^1.5.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-chartjs-2": "^5.2.0",
@@ -29,6 +30,7 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^14.1.0",
     "react-router-dom": "^6.22.2",
+    "socket.io-client": "^4.7.5",
     "styled-components": "^6.1.1",
     "switch": "^0.0.0"
   },
