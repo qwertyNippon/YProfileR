@@ -1,19 +1,32 @@
 import React, { useState, useEffect, useRef } from "react";
 import io from 'socket.io-client';
 import Peer from 'peerjs';
+import axios from 'axios';
 
 function Classroom() {
+    const [data, setData] = useState('');
     const [isMuted, setIsMuted] = useState(true);
     const [isCameraOn, setIsCameraOn] = useState(true);
     const [isGridLayout, setIsGridLayout] = useState(true);
     const [cameraStream, setCameraStream] = useState(null);
 
+    const backend = 'http://127.0.0.1:5000';
+    
+    const sendData = () => {
+        axios.post(`${backend}/api/data`, { message: 'Hello from React' })
+            .then(response => {
+                setData(response.data.message);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    };
 
     const videoGridRef = useRef(null);
     const socket = useRef(io());
     const myPeer = useRef(new Peer(undefined, {
-        host: '/',
-        port: '3001'
+        host: '/Classroom',
+        port: 'http://127.0.0.1:5000/' // Change port to match Flask backend
     }));
     const peers = useRef({});
 
@@ -169,6 +182,10 @@ function Classroom() {
                     <button onClick={handleToggleCamera}>{isCameraOn ? "Turn Off Camera" : "Turn On Camera"}</button>
                     <button onClick={handleEndCall}>End Call</button>
                 </div>
+            </div>
+            <div>
+                <button onClick={sendData}>Send Data</button>
+                <p>Response: {data}</p>
             </div>
         </>
     )

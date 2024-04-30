@@ -7,13 +7,13 @@ const LanguageDisplay = () => {
     return (
         <div>
             <h2>Languages</h2>
-            <ul>
+            {/* <ul >
                 {languages.map((lang, index) => (
                     <li key={index}>
                         {lang.language} - {lang.level}
                     </li>
                 ))}
-            </ul>
+            </ul> */}
         </div>
     );
 };
