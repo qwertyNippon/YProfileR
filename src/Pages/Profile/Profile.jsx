@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSelection from '../../Components/Language/LanguageSelection';
 // import LanguageColumn from '../../Components/Language/LanguageColumn';
@@ -8,13 +8,31 @@ function Profile() {
 
     const { t} = useTranslation()
 
+    // Define state to store user profile data
+    const [userData, setUserData] = useState(null);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchUserData = async () => {
+          try {
+            const response = await axios.get('/profile'); 
+            // Assuming Flask endpoint is '/api/profile' THIS WILL NEED TO BE CHANGED
+            setUserData(response.data);
+          } catch (error) {
+            setError('Error fetching user profile data');
+          }
+        };
+    
+        fetchUserData();
+      }, []);
+
     // const LanguageColumn = ({ languages })
 
     const [text, setText] = useState("");
     const [textCertz, setTextCertz] = useState("");
     const [textareaHeight, setTextareaHeight] = useState("63px");
     const [textareaHeightCertz, setTextareaHeightCertz] = useState("63px");
-  
+
     const handleChange = (event) => {
       setText(event.target.value);
       setTextareaHeight(`${event.target.scrollHeight}px`);
@@ -25,9 +43,45 @@ function Profile() {
       setTextareaHeightCertz(`${event.target.scrollHeight}px`);
       };
 
-    
+      const handleSave = () => {
+        // Assuming your backend endpoint is '/saveBio' and you're sending a POST request
+        fetch('/profile', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ bio: text, certz: textCertz }),
+        })
+        .then(response => {
+          if (response.ok) {
+            console.log('Bio saved successfully!');
+            // You can add further actions here if needed
+          } else {
+            console.error('Failed to save bio');
+          }
+        })
+        .catch(error => {
+          console.error('Error saving bio:', error);
+        });
+      };
+
     return (
         <>
+        {/* THIS SECTION IS FOR TELLING THE TEACHER AND THE STUDENT'S PROFILE APART */}
+            {/* <div> */}
+                {/* {error && <p>{error}</p>} */}
+                {/* {userData && ( */}
+                    {/* <> */}
+                        {/* <h1>Welcome, {userData.username}!</h1> */}
+                        {/* <p>You are a {userData.teacher ? 'teacher' : 'student'}.</p> */}
+                        {/* Use CSS classes or inline styles based on the user's role */}
+                        {/* <div className={userData.teacher ? 'teacher-style' : 'student-style'}> */}
+                            {/* Your content here */}
+                        {/* </div> */}
+                    {/* </> */}
+                {/* )} */}
+            {/* </div> */}
+
             <div className='makeCenter'>
                 <div className="headerProfile">
                     <div className="container">
@@ -95,6 +149,7 @@ function Profile() {
                             </div>
                         </div>
                     </div>
+                    <button onClick={handleSave}>Save</button>
                 </section>
             </div>
         </>
