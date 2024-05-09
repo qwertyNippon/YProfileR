@@ -28,10 +28,20 @@ function Profile() {
 
     // const LanguageColumn = ({ languages })
 
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
     const [text, setText] = useState("");
     const [textCertz, setTextCertz] = useState("");
     const [textareaHeight, setTextareaHeight] = useState("63px");
     const [textareaHeightCertz, setTextareaHeightCertz] = useState("63px");
+
+    const handleChangeFirstName = (e) => {
+        setFirstName(e.target.value);
+    };
+
+    const handleChangeLastName = (e) => {
+        setLastName(e.target.value);
+    };
 
     const handleChange = (event) => {
       setText(event.target.value);
@@ -50,7 +60,7 @@ function Profile() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ bio: text, certz: textCertz }),
+          body: JSON.stringify({ bio: text, certz: textCertz, firstname: firstName, lastname: lastName }),
         })
         .then(response => {
           if (response.ok) {
@@ -102,11 +112,15 @@ function Profile() {
                                 <div className="input-container">
                                     <input
                                         type="text"
+                                        value={firstName}
+                                        onChange={handleChangeFirstName}
                                         placeholder={t('FName')}
                                         className="text-input"
                                     />
                                     <input
                                         type="text"
+                                        value={lastName}
+                                        onChange={handleChangeLastName}
                                         placeholder={t('LName')}
                                         className="text-input"
                                     />
