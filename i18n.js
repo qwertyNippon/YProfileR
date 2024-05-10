@@ -40,8 +40,8 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 FName: 'First Name',
                 LName: 'Last Name',
                 Level: 'Level',
-                Native: 'Native'
-
+                Native: 'Native',
+                Save:'Save',
             },
         },
         es: {
@@ -80,6 +80,7 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 LName: 'Apellido',
                 Level: 'Nivel',
                 Native: 'Nativo',
+                Save:'Ahorrar',
             },
 
         },
@@ -119,6 +120,7 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 LName: 'Nom de famille',
                 Level: 'Niveau',
                 Native: 'Indigène',
+                Save:'Sauvegarder',
             },
         },
     },

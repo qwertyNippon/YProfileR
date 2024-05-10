@@ -163,7 +163,7 @@ function Profile() {
                             </div>
                         </div>
                     </div>
-                    <button onClick={handleSave}>Save</button>
+                    <button className="test" onClick={handleSave}>{t('Save')}</button>
                 </section>
             </div>
         </>
