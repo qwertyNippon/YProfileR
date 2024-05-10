@@ -191,7 +191,7 @@ a {
   .dropdown-menu ul li:hover {
     background-color: var(--logo-type-color);
     border-radius: 7px;
-
+    color: var(--whiteProfile);
   }
   
   .dropdown-menu li {
