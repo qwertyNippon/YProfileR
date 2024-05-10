@@ -56,7 +56,7 @@ const LanguageSelection = () => {
                     {languages.map((lang, index) => (
                         <tr key={index}>
                             <td>{lang.language === "en" ? t('Language') : lang.language}&nbsp;&nbsp;</td>
-                            <td>{lang.level === "Native" ? t('Native') : lang.language}</td>
+                            <td>{lang.level === "Native" ? t('Native') : lang.level}</td>
                             <td>
                                 <button onClick={() => deleteLanguage(index)}><Trash_icons /></button>
                                 <button onClick={() => editLanguage(index, prompt('Enter new language:'), prompt('Enter new level:'))}><Edit_icons /></button>
