@@ -14,6 +14,18 @@
     --black: #000;
     --mob-color: #444444;
     --logo-type-color: #844298;
+
+    --primary-color: #222260;
+    --primary-color2: 'color: rgba(34, 34, 96, .6)';
+    --primary-color3: 'color: rgba(34, 34, 96, .4)';
+    --color-green: #42AD00;
+    --color-red: #FF0000;
+    --color-grey: #e3e2e2;
+    --color-accent: #F56692;
+    --color-delete: #FF0000;
+
+    --text--: #000;
+    --white--: #fff;
 }
 
 .container {
@@ -109,14 +121,14 @@
     margin-left: 17px;
 } */
 
-.test {
+.SaveBut {
     margin-left: 4px;
     padding: 10px;
     background-color: purple;
     background-color: var(--logo-type-color);
 }
 
-.test:hover {
+.SaveBut:hover {
     scale: 1.05;
     color: var(--whiteProfile);
   } 

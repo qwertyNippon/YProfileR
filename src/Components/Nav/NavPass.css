@@ -10,6 +10,13 @@
 
     --text--: #000;
     --white--: #fff;
+
+    --text-colorProfile: #00fbff;
+    --bg-color: #323234;
+    --whiteProfile: #fff;
+    --black: #000;
+    --mob-color: #444444;
+    --logo-type-color: #844298;
 }
 
 
@@ -182,7 +189,7 @@ a {
   }
 
   .dropdown-menu ul li:hover {
-    background-color: var(--color-accent);
+    background-color: var(--logo-type-color);
     border-radius: 7px;
 
   }
