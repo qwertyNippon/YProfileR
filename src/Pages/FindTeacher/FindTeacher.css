@@ -1,0 +1,25 @@
+.teacher-search-container {
+    margin: 20px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .teacher-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .teacher-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
