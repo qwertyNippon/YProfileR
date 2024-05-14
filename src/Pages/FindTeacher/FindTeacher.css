@@ -23,3 +23,61 @@
     margin-bottom: 5px;
   }
   
+/* FindTeacher.css */
+
+.teacher-search-container {
+  margin: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.teacher-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust as needed */
+  gap: 20px;
+}
+
+.teacher-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.teacher-image {
+  width: 50px;
+  height: 50px;
+  background-color: #ccc; /* Placeholder color */
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.teacher-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.teacher-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.teacher-info {
+  margin-bottom: 10px;
+}
+
+.info-label {
+  font-weight: bold;
+}
+
+.teacher-bio {
+  font-size: 14px;
+}
