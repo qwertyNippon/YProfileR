@@ -157,7 +157,11 @@ function Profile() {
                                     </div>
                                 {/* <LanguageDisplay /> */}
 
-
+                                <div>
+                                    <label htmlFor="input-file">
+                                        <input type="file" accept="image/*" />
+                                    </label>
+                                </div>
 
 
                             </div>
