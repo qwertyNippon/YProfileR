@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageSelection from '../../Components/Language/LanguageSelection';
 // import LanguageColumn from '../../Components/Language/LanguageColumn';
-import './Profile.css'
+import './Profile.css';
+import uploadIcon from '../../../src/assets/uploadIcon.png';
 
 function Profile() {
 
@@ -74,6 +75,8 @@ function Profile() {
           console.error('Error saving bio:', error);
         });
       };
+
+    //   js for pictures upload video 10mins in
 
     return (
         <>
@@ -157,9 +160,14 @@ function Profile() {
                                     </div>
                                 {/* <LanguageDisplay /> */}
 
-                                <div>
-                                    <label htmlFor="input-file">
-                                        <input type="file" accept="image/*" />
+                                <div className="hero">
+                                    <label htmlFor="input-file" id='drop-area'>
+                                        <input type="file" accept="image/*" id='input-file' hidden/>
+                                        <div id="img-view">
+                                            <img src={uploadIcon} alt="upload icon" />
+                                            <p>Drag and drop or click here <br />to upload an image</p>
+                                            <span>Upload any images from desktop</span>
+                                        </div>
                                     </label>
                                 </div>
 
