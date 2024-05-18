@@ -160,6 +160,8 @@
     border-radius: 15px;
     border: 2px dashed var(--color-grey);
     background: var(--whiteProfile);
+    background-position: center;
+    background-size: cover;
 }
 
 #img-view img {

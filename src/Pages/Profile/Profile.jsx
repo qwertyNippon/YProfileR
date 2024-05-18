@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import axios from 'axios';
 import LanguageSelection from '../../Components/Language/LanguageSelection';
-// import LanguageColumn from '../../Components/Language/LanguageColumn';
 import './Profile.css';
 import uploadIcon from '../../../src/assets/uploadIcon.png';
 
 function Profile() {
-
-    const { t} = useTranslation()
+    const { t } = useTranslation();
 
     // Define state to store user profile data
     const [userData, setUserData] = useState(null);
@@ -15,19 +14,17 @@ function Profile() {
 
     useEffect(() => {
         const fetchUserData = async () => {
-          try {
-            const response = await axios.get('/profile'); 
-            // Assuming Flask endpoint is '/api/profile' THIS WILL NEED TO BE CHANGED
-            setUserData(response.data);
-          } catch (error) {
-            setError('Error fetching user profile data');
-          }
+            try {
+                const response = await axios.get('/profile');
+                // Assuming Flask endpoint is '/api/profile' THIS WILL NEED TO BE CHANGED
+                setUserData(response.data);
+            } catch (error) {
+                setError('Error fetching user profile data');
+            }
         };
-    
-        fetchUserData();
-      }, []);
 
-    // const LanguageColumn = ({ languages })
+        fetchUserData();
+    }, []);
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -45,52 +42,65 @@ function Profile() {
     };
 
     const handleChange = (event) => {
-      setText(event.target.value);
-      setTextareaHeight(`${event.target.scrollHeight}px`);
-      };
+        setText(event.target.value);
+        setTextareaHeight(`${event.target.scrollHeight}px`);
+    };
 
     const handleChangeCertz = (event) => {
-      setTextCertz(event.target.value);
-      setTextareaHeightCertz(`${event.target.scrollHeight}px`);
-      };
+        setTextCertz(event.target.value);
+        setTextareaHeightCertz(`${event.target.scrollHeight}px`);
+    };
 
-      const handleSave = () => {
+    const handleSave = () => {
         // Assuming your backend endpoint is '/saveBio' and you're sending a POST request
         fetch('/profile', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ bio: text, certz: textCertz, firstname: firstName, lastname: lastName }),
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ bio: text, certz: textCertz, firstname: firstName, lastname: lastName }),
         })
         .then(response => {
-          if (response.ok) {
-            console.log('Bio saved successfully!');
-            // You can add further actions here if needed
-          } else {
-            console.error('Failed to save bio');
-          }
+            if (response.ok) {
+                console.log('Bio saved successfully!');
+                // You can add further actions here if needed
+            } else {
+                console.error('Failed to save bio');
+            }
         })
         .catch(error => {
-          console.error('Error saving bio:', error);
+            console.error('Error saving bio:', error);
         });
-      };
+    };
 
-    //   js for pictures upload video 10mins in
-    const dropArea = document.getElementById('drop-area');
-    const inputFile = document.getElementById('input-file');
-    const imageView = document.getElementById('img-view');
+    // Image upload state and handlers
+    const [imgLink, setImgLink] = useState(null);
 
-    inputFile.addEventListener('change', uploadImage);
+    const uploadImage = (file) => {
+        const link = URL.createObjectURL(file);
+        setImgLink(link);
+    };
 
-    function uploadImage(){
-        let imgLink = URL.createObjectURL(inputFile.files[0]);
-        imageView.style.backgroundImage = `url(${imgLink})`;
-    }   
+    const handleFileChange = (e) => {
+        if (e.target.files && e.target.files[0]) {
+            uploadImage(e.target.files[0]);
+        }
+    };
+
+    const handleDrop = (e) => {
+        e.preventDefault();
+        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+            uploadImage(e.dataTransfer.files[0]);
+        }
+    };
+
+    const handleDragOver = (e) => {
+        e.preventDefault();
+    };
 
     return (
         <>
-        {/* THIS SECTION IS FOR TELLING THE TEACHER AND THE STUDENT'S PROFILE APART */}
+            {/* THIS SECTION IS FOR TELLING THE TEACHER AND THE STUDENT'S PROFILE APART */}
             {/* <div> */}
                 {/* {error && <p>{error}</p>} */}
                 {/* {userData && ( */}
@@ -104,7 +114,6 @@ function Profile() {
                     {/* </> */}
                 {/* )} */}
             {/* </div> */}
-
             <div className='makeCenter'>
                 <div className="headerProfile">
                     <div className="container">
@@ -137,13 +146,13 @@ function Profile() {
                                         placeholder={t('LName')}
                                         className="text-input"
                                     />
-                                <h3 className="makeCenter">{t('IntroduceYourself')}</h3>
-                                    <div className="" >
+                                    <h3 className="makeCenter">{t('IntroduceYourself')}</h3>
+                                    <div className="">
                                         <div>
                                             <textarea className="text-input-Intro"
                                                 value={text}
                                                 onChange={handleChange}
-                                                style={{ height: textareaHeight, overflow: "hidden"}}
+                                                style={{ height: textareaHeight, overflow: "hidden" }}
                                                 placeholder={t('IntroduceYourself')}
                                             />
                                         </div>
@@ -158,29 +167,27 @@ function Profile() {
                                     <div></div>
                                 </div>
                                 <h3>{t('CertificatesQualifications')}</h3>
-                                <div className="" >
-                                        <div>
-                                            <textarea className="text-input-Intro"
-                                                value={textCertz}
-                                                onChange={handleChangeCertz}
-                                                style={{ height: textareaHeightCertz, overflow: "hidden"}}
-                                                placeholder={t('LstCertz')}
-                                            />
-                                        </div>
+                                <div className="">
+                                    <div>
+                                        <textarea className="text-input-Intro"
+                                            value={textCertz}
+                                            onChange={handleChangeCertz}
+                                            style={{ height: textareaHeightCertz, overflow: "hidden" }}
+                                            placeholder={t('LstCertz')}
+                                        />
                                     </div>
-                                {/* <LanguageDisplay /> */}
-
-                                <div className="hero">
-                                    <label htmlFor="input-file" id='drop-area'>
-                                        <input type="file" accept="image/*" id='input-file' hidden/>
-                                        <div id="img-view">
-                                            <img src={uploadIcon} alt="upload icon" />
-                                            <p>Drag and drop or click here <br />to upload an image</p>
-                                            <span>Upload any images from desktop</span>
-                                        </div>
-                                    </label>
                                 </div>
 
+                                <div className="hero">
+                                    <div id="drop-area" onDragOver={handleDragOver} onDrop={handleDrop}>
+                                        <input type="file" accept="image/*" id="input-file" hidden onChange={handleFileChange} />
+                                        <label htmlFor="input-file">
+                                            <div id="img-view" style={{ backgroundImage: imgLink ? `url(${imgLink})` : 'none', border: imgLink ? 'none' : '2px dashed #ccc' }}>
+                                                {imgLink ? '' : <><img src={uploadIcon} alt="upload icon" /><p>Drag and drop or click here<br />to upload an image</p><span>Upload any images from desktop</span></>}
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
@@ -189,7 +196,7 @@ function Profile() {
                 </section>
             </div>
         </>
-    )
+    );
 }
 
-export default Profile
+export default Profile;
