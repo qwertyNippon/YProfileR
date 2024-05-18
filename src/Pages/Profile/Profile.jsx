@@ -98,6 +98,8 @@ function Profile() {
         e.preventDefault();
     };
 
+    const {line1, line1a, line2} = t('upLoadImage');
+
     return (
         <>
             {/* THIS SECTION IS FOR TELLING THE TEACHER AND THE STUDENT'S PROFILE APART */}
@@ -183,7 +185,7 @@ function Profile() {
                                         <input type="file" accept="image/*" id="input-file" hidden onChange={handleFileChange} />
                                         <label htmlFor="input-file">
                                             <div id="img-view" style={{ backgroundImage: imgLink ? `url(${imgLink})` : 'none', border: imgLink ? 'none' : '2px dashed #ccc' }}>
-                                                {imgLink ? '' : <><img src={uploadIcon} alt="upload icon" /><p>Drag and drop or click here<br />to upload an image</p><span>Upload any images from desktop</span></>}
+                                                {imgLink ? '' : <><img src={uploadIcon} alt="upload icon" /><p>{line1} <br /> {line1a}</p><span>{line2}</span></>}
                                             </div>
                                         </label>
                                     </div>

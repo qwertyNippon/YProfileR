@@ -5,6 +5,7 @@ import { initReactI18next } from "react-i18next";
 i18next.use(LanguageDetector).use(initReactI18next).init({
     debug: true,
     fallbackLng: 'en',
+    returnObjects: true,
     resources: {
         en: {
             translation: {
@@ -42,6 +43,12 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 Level: 'Level',
                 Native: 'Native',
                 Save:'Save',
+
+                upLoadImage: {
+                    line1: 'Drag and drop or click here',
+                    line1a: 'to upload an image',
+                    line2: 'Upload any images from desktop',
+                }
             },
         },
         es: {
@@ -81,6 +88,12 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 Level: 'Nivel',
                 Native: 'Nativo',
                 Save:'Ahorrar',
+
+                upLoadImage: {
+                    line1: 'Arrastra y suelta o haz clic aquí',
+                    line1a: 'para subir una imagen',
+                    line2: 'Sube cualquier imagen desde el escritorio',
+                }
             },
 
         },
@@ -121,6 +134,12 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 Level: 'Niveau',
                 Native: 'Indigène',
                 Save:'Sauvegarder',
+
+                upLoadImage: {
+                    line1: 'Glissez-déposez ou cliquez ici',
+                    line1a: 'pour télécharger une image',
+                    line2: 'Téléchargez des images depuis le bureau',
+                }
             },
         },
     },
