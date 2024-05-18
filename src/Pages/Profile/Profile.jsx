@@ -102,20 +102,6 @@ function Profile() {
 
     return (
         <>
-            {/* THIS SECTION IS FOR TELLING THE TEACHER AND THE STUDENT'S PROFILE APART */}
-            {/* <div> */}
-                {/* {error && <p>{error}</p>} */}
-                {/* {userData && ( */}
-                    {/* <> */}
-                        {/* <h1>Welcome, {userData.username}!</h1> */}
-                        {/* <p>You are a {userData.teacher ? 'teacher' : 'student'}.</p> */}
-                        {/* Use CSS classes or inline styles based on the user's role */}
-                        {/* <div className={userData.teacher ? 'teacher-style' : 'student-style'}> */}
-                            {/* Your content here */}
-                        {/* </div> */}
-                    {/* </> */}
-                {/* )} */}
-            {/* </div> */}
             <div className='makeCenter'>
                 <div className="headerProfile">
                     <div className="container">
