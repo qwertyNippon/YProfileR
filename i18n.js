@@ -50,12 +50,14 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 SaveChanges: 'Save Changes',
                 DeleteAccount: 'Delete Account',
                 Password: 'Password',
-                DeleteAccount: 'Delete Account',
 
                 upLoadImage: {
                     line1: 'Drag and drop or click here',
                     line1a: 'to upload an image',
                     line2: 'Upload any images from desktop',
+                },
+                Warning: {
+                    line1: 'Warning: This action is irreversible!',
                 }
             },
         },
@@ -96,19 +98,21 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 Level: 'Nivel',
                 Native: 'Nativo',
                 Save:'Ahorrar',
-                ChangePassword: 'Change Password',
-                CurrentPassword: 'Current Password',
-                NewPassword: 'New Password',
-                VerifyPassword: 'Verify Password',
-                SaveChanges: 'Save Changes',
-                DeleteAccount: 'Delete Account',
-                Password: 'Password',
-                DeleteAccount: 'Delete Account',
+                ChangePassword: 'Cambiar La Contraseña',
+                CurrentPassword: 'Contraseña Actual',
+                NewPassword: 'Nueva Contraseña',
+                VerifyPassword: 'Verificar Contraseña',
+                SaveChanges: 'Guardar Cambios',
+                DeleteAccount: 'Borrar Cuenta',
+                Password: 'Contraseña',
 
                 upLoadImage: {
                     line1: 'Arrastra y suelta o haz clic aquí',
                     line1a: 'para subir una imagen',
                     line2: 'Sube cualquier imagen desde el escritorio',
+                },
+                Warning: {
+                    line1: 'Advertencia: ¡Esta acción es irreversible!',
                 }
             },
 
@@ -150,19 +154,21 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 Level: 'Niveau',
                 Native: 'Indigène',
                 Save:'Sauvegarder',
-                ChangePassword: 'Change Password',
-                CurrentPassword: 'Current Password',
-                NewPassword: 'New Password',
-                VerifyPassword: 'Verify Password',
-                SaveChanges: 'Save Changes',
-                DeleteAccount: 'Delete Account',
-                Password: 'Password',
-                DeleteAccount: 'Delete Account',
+                ChangePassword: 'Changer le mot de passe',
+                CurrentPassword: 'Mot de passe actuel',
+                NewPassword: 'Nouveau mot de passe',
+                VerifyPassword: 'Vérifier le mot de passe',
+                SaveChanges: 'Sauvegarder les modifications',
+                DeleteAccount: 'Supprimer le compte',
+                Password: 'Mot de passe',
 
                 upLoadImage: {
                     line1: 'Glissez-déposez ou cliquez ici',
                     line1a: 'pour télécharger une image',
                     line2: 'Téléchargez des images depuis le bureau',
+                },
+                Warning: {
+                    line1: 'Attention : Cette action est irréversible!',
                 }
             },
         },
