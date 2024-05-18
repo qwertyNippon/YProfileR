@@ -1,10 +1,11 @@
-.container {
+.settings-container {
     display: flex;
     height: 100vh;
     font-family: Arial, sans-serif;
   }
   
   .sidebar {
+    height: 113%;
     width: 200px;
     background-color: #f4f4f4;
     padding: 20px;
@@ -15,7 +16,7 @@
     padding: 10px;
     margin: 10px 0;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 7px;
     color: #333;
   }
   
@@ -29,31 +30,37 @@
     padding: 20px;
   }
   
-  h2 {
+  .settings-h2 {
     margin-bottom: 20px;
   }
   
-  form {
+  .settings-form {
     display: flex;
     flex-direction: column;
   }
   
-  form > div {
+  .settings-form > div {
     margin-bottom: 15px;
   }
   
-  label {
+  .settings-label {
     margin-bottom: 5px;
     display: block;
   }
   
-  input {
+  .text-input-pass {
+    border-radius: 7px;
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
   }
+
+  .text-input-pass:focus {
+    outline: none;
+    border-color: dodgerblue;
+  }
   
-  button {
+  .delButton {
     padding: 10px;
     background-color: #ff69b4;
     border: none;
@@ -62,7 +69,21 @@
     border-radius: 5px;
   }
   
-  button:hover {
+  .delButton:hover {
     background-color: #ff1493;
   }
   
+.saveButton {
+    align-self: center;
+    width: 50%;
+    padding: 10px;
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+.saveButton:hover {
+    background-color: #ff1493;
+}

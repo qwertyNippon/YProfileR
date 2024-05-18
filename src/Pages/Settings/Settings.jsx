@@ -8,7 +8,7 @@ function Settings() {
     
     return (
         <>
-            <div className="container">
+            <div className="settings-container">
                 <div className="sidebar">
                     <div
                         className={`option ${selectedOption === 'change-password' ? 'active' : ''}`}
