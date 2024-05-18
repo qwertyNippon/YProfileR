@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import { useTranslation } from "react-i18next";
 import ChangePassword from './ChangePassword.jsx';
 import DeleteAccount from './DeleteAccount.jsx';
+import axios from 'axios';
 import './Settings.css';
 
 function Settings() {
     const [selectedOption, setSelectedOption] = useState('change-password');
-    
+    const { t } = useTranslation();
+
     return (
         <>
             <div className="settings-container">
@@ -14,13 +17,13 @@ function Settings() {
                         className={`option ${selectedOption === 'change-password' ? 'active' : ''}`}
                         onClick={() => setSelectedOption('change-password')}
                     >
-                        Password
+                        {t('Password')}
                     </div>
                     <div
                         className={`option ${selectedOption === 'delete-account' ? 'active' : ''}`}
                         onClick={() => setSelectedOption('delete-account')}
                     >
-                        Delete account
+                        {t('DeleteAccount')}
                     </div>
                 </div>
                 <div className="content">

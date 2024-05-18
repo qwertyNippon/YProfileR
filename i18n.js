@@ -43,6 +43,14 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 Level: 'Level',
                 Native: 'Native',
                 Save:'Save',
+                ChangePassword: 'Change Password',
+                CurrentPassword: 'Current Password',
+                NewPassword: 'New Password',
+                VerifyPassword: 'Verify Password',
+                SaveChanges: 'Save Changes',
+                DeleteAccount: 'Delete Account',
+                Password: 'Password',
+                DeleteAccount: 'Delete Account',
 
                 upLoadImage: {
                     line1: 'Drag and drop or click here',
@@ -88,6 +96,14 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 Level: 'Nivel',
                 Native: 'Nativo',
                 Save:'Ahorrar',
+                ChangePassword: 'Change Password',
+                CurrentPassword: 'Current Password',
+                NewPassword: 'New Password',
+                VerifyPassword: 'Verify Password',
+                SaveChanges: 'Save Changes',
+                DeleteAccount: 'Delete Account',
+                Password: 'Password',
+                DeleteAccount: 'Delete Account',
 
                 upLoadImage: {
                     line1: 'Arrastra y suelta o haz clic aquí',
@@ -134,6 +150,14 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 Level: 'Niveau',
                 Native: 'Indigène',
                 Save:'Sauvegarder',
+                ChangePassword: 'Change Password',
+                CurrentPassword: 'Current Password',
+                NewPassword: 'New Password',
+                VerifyPassword: 'Verify Password',
+                SaveChanges: 'Save Changes',
+                DeleteAccount: 'Delete Account',
+                Password: 'Password',
+                DeleteAccount: 'Delete Account',
 
                 upLoadImage: {
                     line1: 'Glissez-déposez ou cliquez ici',
