@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import './Home.css'
 
 function Home() {
+
+    const handleLoginClick = () => {
+        window.location.href = '/SignUp';
+      };
     
     return (
         <>
@@ -11,8 +15,8 @@ function Home() {
                     <div className="hero-content">
                         <h1>Learn Languages Online</h1>
                         <p>Discover the joy of learning a new language from the comfort of your home.</p>
-                        <button className="cta-button">
-                            <Link to='/SignUp'>Get Started</Link>
+                        <button className="cta-button" onClick={handleLoginClick}>
+                            Get Started
                         </button>
                     </div>
                 </header>
