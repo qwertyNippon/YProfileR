@@ -26,7 +26,7 @@ function App() {
   return (
     <>
       <ContextWrapper>
-          {(location.pathname === '/Login' || location.pathname === '/SignUp') ? <NavLogin /> : <NavPass />}
+          {(location.pathname === '/Login' || location.pathname === '/SignUp' || location.pathname === '/Home' || location.pathname === '/') ? <NavLogin /> : <NavPass />}
           <Routes>
             <Route children path='/' element={<Home />} />
             <Route children path='/Login' element={<Login />} />
