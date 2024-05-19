@@ -9,7 +9,7 @@ import LanguageIcons from '../Icons/Langauge_icons';
 import './NavPass.css';
 import Logo from '../../assets/Logo.png';
 import i18next from 'i18next';
-import LanguageSelection from '../Language/LanguageSelection'
+import LanguageSelection from '../Language/LanguageSelection';
 
 
 function NavPass() {
