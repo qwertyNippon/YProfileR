@@ -42,6 +42,11 @@ function Login() {
     //          alert('username not found')
     //     }
     // }
+    
+    const handleLoginClick = () => {
+        window.location.href = '/MyMessages';
+      };
+
     return (
         < >
             <div className="makeCenter top">
@@ -66,7 +71,7 @@ function Login() {
                         {/* <input type="email" placeholder="Email" className="input-field" /> */}
                         <input type="text" placeholder="Username" className="input-field" />
                         <input type="password" placeholder="Password" className="input-field" />
-                        <button type="submit" className="submit-button">Login</button>
+                        <button type="submit" className="submit-button" onClick={handleLoginClick}>Login</button>
                     </div>
 
                     <div className="bottomText space">By clicking Log in or Continue with, you agree to Preply <Link><a href="#" className="TOS">Terms of Use</a></Link> and <Link><a href="#" className="TOS">Privacy Policy</a></Link></div>
