@@ -88,3 +88,14 @@
 .saveButton:hover {
     background-color: #ff1493;
 }
+
+.eye-icon {
+    position: absolute;
+    margin-top: 12px;
+    right: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
