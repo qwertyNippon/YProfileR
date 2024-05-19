@@ -18,7 +18,7 @@
     height: 510px;
     color: red;
     background-color: var(--color-grey);
-}
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(35,154,163,1) 0%, rgba(0,185,255,1) 50%);}
 
 .tutOstud{
     width: 500px;
