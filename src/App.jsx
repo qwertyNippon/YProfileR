@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+import { useLocation } from 'react-router-dom';
 // import { GlobalContext } from './context/GlobalContext'
 import ContextWrapper from "./context/ContextWrapper";
 
@@ -22,19 +22,11 @@ import Community from './Pages/Community/Community'
 import FindTeacher from './Pages/FindTeacher/FindTeacher'
 
 function App() {
-  const [currentUrl, setCurrentUrl] = useState(window.location.href);
-
-  let NavComponent;
-  if (currentUrl.includes('/Login') || ('/SignUp')) {
-    NavComponent = NavLogin;
-  } else {
-    NavComponent = NavPass;
-  }
 
   return (
     <>
       <ContextWrapper>
-          <NavComponent />
+          {(location.pathname === '/Login' || location.pathname === '/SignUp') ? <NavLogin /> : <NavPass />}
           <Routes>
             <Route children path='/' element={<Home />} />
             <Route children path='/Login' element={<Login />} />
