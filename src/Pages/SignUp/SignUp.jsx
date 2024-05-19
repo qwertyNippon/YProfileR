@@ -33,6 +33,10 @@ function SignUp() {
         });
     }
 
+    const handleLoginClick = () => {
+        window.location.href = '/Login';
+      };
+
     return (
         < >
             <div className="makeCenter top">
@@ -58,7 +62,7 @@ function SignUp() {
                         <input type="text" placeholder="Username" className="input-field" />
                         <input type="password" placeholder="Password" className="input-field" />
                         <input type="password" placeholder="Confirm Password" className="input-field" />
-                        <button type="submit" className="submit-button">Sign up</button>
+                        <button type="submit" className="submit-button" onClick={handleLoginClick}>Sign up</button>
                     </div>
 
                     <div className="bottomText space">By clicking Log in or Continue with, you agree to Preply <Link><a href="#" className="TOS">Terms of Use</a></Link> and <Link><a href="#" className="TOS">Privacy Policy</a></Link></div>

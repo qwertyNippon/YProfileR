@@ -87,7 +87,7 @@
 .bottomText {
     position: absolute;
     text-align: center;
-    width: 100%;
+    width: 65%;
     bottom: 0;
 }
 
@@ -113,6 +113,7 @@
   }
   
   .submit-button {
+    width: 100%;
     padding: 10px 15px;
     background-color: #007bff;
     color: #fff;
