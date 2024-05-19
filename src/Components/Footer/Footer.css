@@ -10,9 +10,16 @@
     margin: 10px;
 }
 
-footer {
+.footer {
     position: absolute;
-    bottom: -20rem;
+    bottom: -19.3rem;
+    width: 100%;
+    /* flex-shrink: 0; */
+}
+
+.footer-home {
+    position: relative;
+    bottom: 0;
     width: 100%;
     /* flex-shrink: 0; */
 }
@@ -22,3 +29,4 @@ footer {
     width: 110%;
     margin-left: -50px;
 }
+

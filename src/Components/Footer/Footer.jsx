@@ -1,12 +1,16 @@
 import React from "react";
+import { useLocation } from 'react-router-dom';
 import './Footer.css'
 
 function Footer() {
     
+    const location = useLocation();
+    const isHome = location.pathname === '/Home';
+
     return (
         <>
-            <footer class="space" id="FAQ">
-
+            <footer className= {isHome ? "footer-home" : "footer"} id="FAQ">
+                
                 <hr className="hr"/>
 
                 <div className="">
