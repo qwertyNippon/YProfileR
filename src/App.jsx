@@ -25,9 +25,7 @@ function App() {
   const [currentUrl, setCurrentUrl] = useState(window.location.href);
 
   let NavComponent;
-  if (currentUrl.includes('/Login')) {
-    NavComponent = NavLogin;
-  } else if (currentUrl.includes('/SignUp')){
+  if (currentUrl.includes('/Login') || ('/SignUp')) {
     NavComponent = NavLogin;
   } else {
     NavComponent = NavPass;

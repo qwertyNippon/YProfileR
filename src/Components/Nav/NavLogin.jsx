@@ -35,7 +35,7 @@ function NavLogin() {
                 </ul>
 
                 <div className="log_butt_right_container">
-                    <div className="block">
+                    <div className="blok">
                         <div className="lang-container">
                             <Link to='#' className="navLinks"><LanguageIcons /></Link>
                             <Link to='#' className="navLinks" onClick={toggleDropdown}><ArrowDownIcons /></Link>
