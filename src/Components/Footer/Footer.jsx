@@ -1,8 +1,11 @@
 import React from "react";
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 import './Footer.css'
 
 function Footer() {
+
+    const { t } = useTranslation();
     
     const location = useLocation();
     const isHome = location.pathname === '/Home';

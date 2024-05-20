@@ -50,6 +50,11 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 SaveChanges: 'Save Changes',
                 DeleteAccount: 'Delete Account',
                 Password: 'Password',
+                LearnLanOnline: 'Learn Languages Online',
+                GetStart:'Get Started',
+                InterLessons:'Interactive Lessons',
+                ExpertTut:'Expert Tutors',
+                FlexSch:'Flexible Schedule',
 
                 upLoadImage: {
                     line1: 'Drag and drop or click here',
@@ -105,6 +110,11 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 SaveChanges: 'Guardar Cambios',
                 DeleteAccount: 'Borrar Cuenta',
                 Password: 'Contraseña',
+                LearnLanOnline: 'Aprende Idiomas En Línea',
+                GetStart:'Comenzar',
+                InterLessons:'Lecciones Interactivas',
+                ExpertTut:'Tutores Expertos',
+                FlexSch:'Horario Flexible',
 
                 upLoadImage: {
                     line1: 'Arrastra y suelta o haz clic aquí',
@@ -161,6 +171,11 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 SaveChanges: 'Sauvegarder les modifications',
                 DeleteAccount: 'Supprimer le compte',
                 Password: 'Mot de passe',
+                LearnLanOnline: 'Apprendre Des Langues En Ligne',
+                GetStart:'Commencer',
+                InterLessons:'Leçons Interactives',
+                ExpertTut:'Tuteurs Experts',
+                FlexSch:'Horaire Flexible',
 
                 upLoadImage: {
                     line1: 'Glissez-déposez ou cliquez ici',
