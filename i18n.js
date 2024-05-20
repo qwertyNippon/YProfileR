@@ -63,7 +63,22 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 },
                 Warning: {
                     line1: 'Warning: This action is irreversible!',
-                }
+                },
+                Discovery: {
+                    LineDiscover: "Discover the joy of learning a new language from the comfort of your home."
+                },
+                WhyLearn: {
+                    LineWhy: "Why Learn with Us?",
+                },
+                EngageWith: {
+                    LineEngage: "Engage with interactive content designed to help you learn effectively.",
+                },
+                LearnFrom: {
+                    LineLearn: "Learn from experienced tutors who are passionate about teaching languages.",
+                },
+                ChooseThe: {
+                    LineChoose: "Choose the best time to learn that fits your lifestyle and commitments.",
+                },
             },
         },
         es: {
@@ -123,7 +138,22 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 },
                 Warning: {
                     line1: 'Advertencia: ¡Esta acción es irreversible!',
-                }
+                },
+                Discovery: {
+                    LineDiscover: "Descubre la alegría de aprender un nuevo idioma desde la comodidad de tu hogar."
+                },
+                WhyLearn: {
+                    LineWhy: "¿Por qué aprender con nosotros?",
+                },
+                EngageWith: {
+                    LineEngage: "Interáctua con contenido interactivo diseñado para ayudarte a aprender de manera efectiva.",
+                },
+                LearnFrom: {
+                    LineLearn: "Aprende de tutores experimentados que están apasionados por enseñar idiomas.",
+                },
+                ChooseThe: {
+                    LineChoose: "Aprende de tutores experimentados que están apasionados por enseñar idiomas.",
+                },
             },
 
         },
@@ -184,7 +214,22 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 },
                 Warning: {
                     line1: 'Attention : Cette action est irréversible!',
-                }
+                },
+                Discovery: {
+                    LineDiscover: "Découvrez la joie d'apprendre une nouvelle langue depuis le confort de votre maison."
+                },
+                WhyLearn: {
+                    LineWhy: "Pourquoi apprendre avec nous ?",
+                },
+                EngageWith: {
+                    LineEngage: "Interagissez avec du contenu interactif conçu pour vous aider à apprendre efficacement.",
+                },
+                LearnFrom: {
+                    LineLearn: "Apprenez avec des tuteurs expérimentés passionnés par l'enseignement des langues.",
+                },
+                ChooseThe: {
+                    LineChoose: "Choisissez le meilleur moment pour apprendre qui s'adapte à votre mode de vie et à vos engagements.",
+                },
             },
         },
     },

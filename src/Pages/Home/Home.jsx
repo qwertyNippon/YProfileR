@@ -16,6 +16,11 @@ const images = [
 function Home() {
 
     const { t } = useTranslation();
+    const {LineDiscover} = t('Discovery');
+    const {LineWhy} = t('WhyLearn');
+    const {LineEngage} = t('EngageWith');
+    const {LineLearn} = t('LearnFrom');
+    const {LineChoose} = t('ChooseThe');
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -31,6 +36,8 @@ function Home() {
         window.location.href = '/SignUp';
     };
 
+
+
     return (
         <>
             <div className="home-container">
@@ -40,7 +47,7 @@ function Home() {
                 >
                     <div className="hero-content">
                         <h1>{t('LearnLanOnline')}</h1>
-                        <p>Discover the joy of learning a new language from the comfort of your home.</p>
+                        <p>{LineDiscover}</p>
                         <button className="cta-button" onClick={handleLoginClick}>
                         {t('GetStart')}
                         </button>
@@ -55,19 +62,19 @@ function Home() {
                     </div>
                 </header>
                 <section className="features-section">
-                    <h2>Why Learn with Us?</h2>
+                    <h2>{LineWhy}</h2>
                     <div className="features">
                         <div className="feature">
                             <h3>{t('InterLessons')}</h3>
-                            <p>Engage with interactive content designed to help you learn effectively.</p>
+                            <p>{LineEngage}</p>
                         </div>
                         <div className="feature">
                             <h3>{t('ExpertTut')}</h3>
-                            <p>Learn from experienced tutors who are passionate about teaching languages.</p>
+                            <p>{LineLearn}</p>
                         </div>
                         <div className="feature">
                             <h3>{t('FlexSch')}</h3>
-                            <p>Choose the best time to learn that fits your lifestyle and commitments.</p>
+                            <p>{LineChoose}</p>
                         </div>
                     </div>
                 </section>
