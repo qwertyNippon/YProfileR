@@ -8,7 +8,7 @@ function Footer() {
     const { t } = useTranslation();
     
     const location = useLocation();
-    const isHome = location.pathname === '/Home';
+    const isHome = location.pathname === '/Home' || ' ';
 
     return (
         <>
