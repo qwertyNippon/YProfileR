@@ -55,6 +55,11 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 InterLessons:'Interactive Lessons',
                 ExpertTut:'Expert Tutors',
                 FlexSch:'Flexible Schedule',
+                Copyright:'Copyright',
+                RightsReserved:'All Rights Reserved by',
+                FindTut:'Find tutors',
+                BecomeTut:'Become a tutor',
+                Login: 'Log in',
 
                 upLoadImage: {
                     line1: 'Drag and drop or click here',
@@ -130,6 +135,11 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 InterLessons:'Lecciones Interactivas',
                 ExpertTut:'Tutores Expertos',
                 FlexSch:'Horario Flexible',
+                Copyright: 'Derechos de Autor',
+                RightsReserved: 'Todos los Derechos Reservados por',  
+                FindTut: 'Buscar tutores',
+                BecomeTut: 'Conviértete en tutor',  
+                Login: 'Iniciar sesión',                         
 
                 upLoadImage: {
                     line1: 'Arrastra y suelta o haz clic aquí',
@@ -206,6 +216,11 @@ i18next.use(LanguageDetector).use(initReactI18next).init({
                 InterLessons:'Leçons Interactives',
                 ExpertTut:'Tuteurs Experts',
                 FlexSch:'Horaire Flexible',
+                Copyright: "Droit d'Auteur",
+                RightsReserved: 'Tous les Droits Réservés par',
+                FindTut: 'Trouver des tuteurs',
+                BecomeTut: 'Devenir tuteur',   
+                Login: 'Se connecter',          
 
                 upLoadImage: {
                     line1: 'Glissez-déposez ou cliquez ici',

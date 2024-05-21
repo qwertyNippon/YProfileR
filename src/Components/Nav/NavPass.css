@@ -197,4 +197,11 @@ a {
   
   .dropdown-menu li {
     padding: 0px 5px;
+    gap: -8px 0px;
   }
+
+#LangLi {
+    margin: -20px 0px;
+    text-align: left;
+  }
+

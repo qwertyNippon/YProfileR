@@ -20,7 +20,7 @@ function Footer() {
                     <div className="row">
                         <div className="">
                             <p className="makeCenter">
-                                Copyright &copy; 2024 All Rights Reserved by
+                                {t('Copyright')} &copy; 2024 {t('RightsReserved')}
                                 <div className="column space">
                                     <a href="https://yurikaclasses.onrender.com/" target="_blank">YURI JAPAN</a>
                                     &nbsp;&nbsp;&nbsp;

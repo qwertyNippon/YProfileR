@@ -27,11 +27,11 @@ function NavLogin() {
         < >
             <div className="containerNavLogin">
                 <div className="logo">
-                    <a href="#"><img className="LogoPic" src={Logo} alt="Logo" /></a>
+                    <a href="/"><img className="LogoPic" src={Logo} alt="Logo" /></a>
                 </div>
                 <ul className="menu">
-                    <li><Link to='#'>Find tutors</Link></li>
-                    <li><Link to='#'>Become a tutor</Link></li>
+                    <li><Link to='/FindTeacher'>{t('FindTut')}</Link></li>
+                    <li><Link to='#'>{t('BecomeTut')}</Link></li>
                 </ul>
 
                 <div className="log_butt_right_container">
@@ -43,15 +43,15 @@ function NavLogin() {
                                 <div className="dropdown-menu">
                                     <ul>
                                         <li onClick={() => { changeLanguage('en'); LanguageSelection(fallbackLanguage = i18next.options.resources[0]); }}>English</li>
-                                        <li onClick={() => { changeLanguage('es'); LanguageSelection(fallbackLanguage = i18next.options.resources[1]); }}>Spanish</li>
-                                        <li onClick={() => { changeLanguage('fr'); LanguageSelection(fallbackLanguage = i18next.options.resources[2]); }}>French</li>
+                                        <li onClick={() => { changeLanguage('es'); LanguageSelection(fallbackLanguage = i18next.options.resources[1]); }}>Español</li>
+                                        <li onClick={() => { changeLanguage('fr'); LanguageSelection(fallbackLanguage = i18next.options.resources[2]); }}>Français</li>
                                     </ul>
                                 </div>
                                 // the default is set as english, need to find a way to change it with each click
                             )}
                         </div>
                     </div>
-                    <button className="friendButt log_butt_right"><Link to="/login"><i className="fa-solid fa-arrow-right-to-bracket"></i> Log in</Link></button>
+                    <button className="friendButt log_butt_right"><Link to="/login"><i className="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;{t('Login')}</Link></button>
                 </div>
             </div>
             <hr />
