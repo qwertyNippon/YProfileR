@@ -1,11 +1,13 @@
 import React from "react";
+import MainSection from './MainSection';
+import './MyLessons.css';
 
 function MyLessons() {
     
     return (
         <>
-            <div className="makeCenter">
-                Not Available
+            <div className="app-container">
+                <MainSection />
             </div>
         </>
     )

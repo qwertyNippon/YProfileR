@@ -1,0 +1,106 @@
+/* MainComponent.css */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header.css */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .header nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .header nav ul li {
+    margin: 0 10px;
+  }
+  
+  .profile-status {
+    align-self: center;
+  }
+  
+  /* MainSection.css */
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* LessonDetails.css */
+  .lesson-details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .upcoming-lesson {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .lesson-info h2 {
+    margin: 0;
+  }
+  
+  .students-tabs {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .tab {
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    border-bottom: 2px solid #f06292;
+  }
+  
+  /* StudentList.css */
+  .student-list {
+    padding: 20px;
+  }
+  
+  .student-list-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .student-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .student-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .student-info img {
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .student-actions button {
+    margin-left: 5px;
+  }
+  
