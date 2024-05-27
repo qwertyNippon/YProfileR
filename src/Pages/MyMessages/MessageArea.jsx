@@ -1,5 +1,6 @@
 import React from 'react';
 // import './MessageArea.css';
+import './MyMessages.css';
 
 const MessageArea = () => {
   return (

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SearchGlassIcons from '../../Components/Icons/SearchGlass_icons'; // Ensure this path is correct
 import './Sidebar.css';
+import './MyMessages.css';
 
 const Sidebar = () => {
   const [students, setStudents] = useState([]);
@@ -17,7 +18,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="search-bar">
         <div className="search-input-container">
-          <input type="text" placeholder="Search students or messages" />
+          <input type="text" placeholder="Search students" />
           <button className="search-icon">
             <SearchGlassIcons />
           </button>
