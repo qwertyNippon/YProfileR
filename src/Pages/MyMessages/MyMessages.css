@@ -44,11 +44,6 @@
   cursor: pointer;
 }
 
-/* .search-icon svg {
-  color: #888;
-  font-size: 1.2em;
-} */
-
 .student-list {
   overflow-y: auto;
   height: calc(100vh - 60px); /* Adjust height as needed */
@@ -85,6 +80,7 @@
 .message-area {
   flex-grow: 1; /* Takes up remaining space */
   padding: 20px;
+  border-left: 1px solid #ccc; /* Added border on the left */
 }
 
 .message-header {
@@ -125,10 +121,11 @@
 
 /* StudentDetails.css */
 .student-details {
+  height: 113vh;
   width: 20%;
   padding: 20px;
   background-color: #fff;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #ccc; /* Match border on the left */
   text-align: center;
 }
 
@@ -164,10 +161,6 @@
 
 .lesson-info p {
   margin: 5px 0;
-}
-
-.text {
-  font-size: 11px;
 }
 
 /* Media Queries */
