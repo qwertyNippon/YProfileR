@@ -166,6 +166,10 @@
   margin: 5px 0;
 }
 
+.text {
+  font-size: 11px;
+}
+
 /* Media Queries */
 @media (max-width: 940px) {
   .search-icon {

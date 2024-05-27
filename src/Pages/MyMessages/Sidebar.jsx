@@ -8,7 +8,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     // Fetch the student data from the backend
-    fetch('http://localhost:5000/api/students')
+    fetch('http://localhost:5000/students')
       .then(response => response.json())
       .then(data => setStudents(data))
       .catch(error => console.error('Error fetching student data:', error));
@@ -18,7 +18,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="search-bar">
         <div className="search-input-container">
-          <input type="text" placeholder="Search students" />
+          <input className='text' type="text" placeholder="Search students" />
           <button className="search-icon">
             <SearchGlassIcons />
           </button>
