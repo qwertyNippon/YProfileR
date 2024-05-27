@@ -14,6 +14,20 @@ const Sidebar = () => {
       .catch(error => console.error('Error fetching student data:', error));
   }, []);
 
+  const handleStudentClick = (studentId) => {
+    fetch(`http://localhost:5000/students/${studentId}/select`, {
+      method: 'POST',
+    })
+      .then(response => response.json())
+      .then(updatedStudent => {
+        // Update the students state with the new selection state
+        setStudents(students.map(student =>
+          student.id === updatedStudent.id ? updatedStudent : { ...student, isSelected: false }
+        ));
+      })
+      .catch(error => console.error('Error updating student selection:', error));
+  };
+
   return (
     <div className="sidebar">
       <div className="search-bar">
@@ -25,8 +39,12 @@ const Sidebar = () => {
         </div>
       </div>
       <div className="student-list">
-        {students.map((student, index) => (
-          <div key={index} className={`student-item ${student.isSelected ? 'selected' : ''}`}>
+        {students.map((student) => (
+          <div
+            key={student.id}
+            className={`student-item ${student.isSelected ? 'selected' : ''}`}
+            onClick={() => handleStudentClick(student.id)}
+          >
             <img src={student.avatarUrl} alt={student.name} />
             <div className="student-info">
               <p>{student.name}</p>
