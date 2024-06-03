@@ -30,7 +30,7 @@ function NavPass() {
 
     const logout = () => {
         setUser(null);
-        navigate('/login');
+        navigate('/home');
     };
 
     return (

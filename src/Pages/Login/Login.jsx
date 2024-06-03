@@ -1,16 +1,16 @@
 // Login.jsx
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import './Login.css';
+import { UserContext } from '../../context/UserContext';  // Import the UserContext
 
-const UserContext = createContext();
 const BASE_URL = 'http://localhost:5000'; // Replace with your Flask backend URL
 
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const { setUser } = useContext(UserContext);
+    const { setUser } = useContext(UserContext);  // Use the UserContext
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -22,7 +22,7 @@ function Login() {
         };
 
         try {
-            const response = await axios.post(`${BASE_URL}/login`, JSON.stringify(vals), {
+            const response = await axios.post(`${BASE_URL}/login`, vals, {
                 headers: { "Content-Type": "application/json" },
             });
             handleData(response.data);
@@ -34,7 +34,6 @@ function Login() {
     const handleData = (data) => {
         if (data.message === "authenticated") {
             setUser(data.data);
-            console.log(data);
             navigate('/explore');
         } else if (data.message === "username not found") {
             alert('Username not found');

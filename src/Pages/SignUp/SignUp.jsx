@@ -1,7 +1,5 @@
-// SignUp.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import axios from "axios";
 import './SignUp.css';
 
@@ -25,20 +23,20 @@ function SignUp() {
             confirm_password: confirmPassword,
         };
 
-        axios.post(`${BASE_URL}/register`, JSON.stringify(vals), {
+        axios.post(`${BASE_URL}/register`, vals, {
             headers: { "Content-Type": "application/json" }
         })
-        .then(function (response) {
-            console.log(response);
-            navigate('/login');
+        .then(response => {
+            console.log(response.data);
+            if (response.data.message === "Registration successful") {
+                navigate('/login');
+            } else {
+                console.error("Unexpected response:", response.data);
+            }
         })
-        .catch(function (error) {
-            console.log(error);
+        .catch(error => {
+            console.error("Error during registration:", error);
         });
-    };
-
-    const handleLoginClick = () => {
-        navigate('/login');
     };
 
     return (

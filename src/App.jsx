@@ -1,9 +1,6 @@
-import { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
-// import { GlobalContext } from './context/GlobalContext'
+import { useContext } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import ContextWrapper from "./context/ContextWrapper";
-
 import './App.css'
 import NavPass from './Components/Nav/NavPass'
 import NavLogin from './Components/Nav/NavLogin'
@@ -20,32 +17,37 @@ import Profile from './Pages/Profile/Profile'
 import Settings from './Pages/Settings/Settings'
 import Community from './Pages/Community/Community'
 import FindTeacher from './Pages/FindTeacher/FindTeacher'
+import { UserProvider, UserContext } from './context/UserContext'; // Import UserProvider and UserContext
 
 function App() {
+  const location = useLocation();
+  const { user } = useContext(UserContext) || {}; // Use user from UserContext
 
   return (
     <>
-      <ContextWrapper>
+      <UserProvider>
+        <ContextWrapper>
           {(location.pathname === '/Login' || location.pathname === '/SignUp' || location.pathname === '/Home' || location.pathname === '/') ? <NavLogin /> : <NavPass />}
           <Routes>
-            <Route children path='/' element={<Home />} />
-            <Route children path='/Login' element={<Login />} />
-            <Route children path='/SignUp' element={<SignUp />} />
-            <Route children path='/MyMessages' element={<MyMessages />} />
-            <Route children path='/MyLessons' element={<MyLessons />} />
-            <Route children path='/Classroom' element={<Classroom />} />
-            <Route children path='/Calendar' element={<Calendar />} />
-            <Route children path='/Statistics' element={<Statistics />} />
-            <Route children path='/Profile' element={<Profile />} />
-            <Route children path='/Settings' element={<Settings />} />
-            <Route children path='/Community' element={<Community />} />
-            <Route children path='/FindTeacher' element={<FindTeacher />} />
-            <Route children path='/Home' element={<Home />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/Login' element={<Login />} />
+            <Route path='/SignUp' element={<SignUp />} />
+            <Route path='/MyMessages' element={<MyMessages />} />
+            <Route path='/MyLessons' element={<MyLessons />} />
+            <Route path='/Classroom' element={<Classroom />} />
+            <Route path='/Calendar' element={<Calendar />} />
+            <Route path='/Statistics' element={<Statistics />} />
+            <Route path='/Profile' element={<Profile />} />
+            <Route path='/Settings' element={<Settings />} />
+            <Route path='/Community' element={<Community />} />
+            <Route path='/FindTeacher' element={<FindTeacher />} />
+            <Route path='/Home' element={<Home />} />
           </Routes>
           <Footer />
-      </ContextWrapper>
+        </ContextWrapper>
+      </UserProvider>
     </>
   )
 }
 
-export default App
+export default App;

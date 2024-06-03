@@ -27,7 +27,7 @@ function NavLogin() {
         < >
             <div className="containerNavLogin">
                 <div className="logo">
-                    <a href="/"><img className="LogoPic" src={Logo} alt="Logo" /></a>
+                    <a href="/home"><img className="LogoPic" src={Logo} alt="Logo" /></a>
                 </div>
                 <ul className="menu">
                     <li><Link to='/FindTeacher'>{t('FindTut')}</Link></li>
