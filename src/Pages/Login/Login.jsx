@@ -1,59 +1,55 @@
-import React from "react";
+// Login.jsx
+import React, { useState, createContext, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useState, createContext, useContext } from "react";
 import axios from "axios";
-import './Login.css'
+import './Login.css';
 
 const UserContext = createContext();
+const BASE_URL = 'http://localhost:5000'; // Replace with your Flask backend URL
 
 function Login() {
-    // const [userName, setUserName] = useState('');
-    // const [password, setPassword] = useState('');
-    // const { user, setUser } = useContext(DataContext);
-    // const navigate = useNavigate()
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const { setUser } = useContext(UserContext);
+    const navigate = useNavigate();
 
-    // function backTo(){
-    //     navigate('/Signup')
-    // }
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     const form = e.target;
-    //     console.log(form);
-    //     let vals = {};
-    //     vals['username']= e.target[0].value;
-    //     vals['pass'] = e.target[1].value;
-    //     console.log(vals);
-    //     const response = await axios.post(`${BASE_URL}/login`, JSON.stringify(vals), {
-    //         headers: { "Content-Type": "application/json" },
-    //     }
-    //     )
-    //     .then((response) => handleData(response.data))
+        const vals = {
+            username: username,
+            password: password,
+        };
 
-    // }
-    //     const handleData = (data) => {
-    //         if (data.message === "authenticated") {
-    //                 setUser(data.data);
-                    
-    //             console.log(data)
-    //             navigate('/explore')
-                    
-    //     } else if (data.message === "username not found"){
-    //          alert('username not found')
-    //     }
-    // }
-    
-    const handleLoginClick = () => {
-        window.location.href = '/MyMessages';
-      };
+        try {
+            const response = await axios.post(`${BASE_URL}/login`, JSON.stringify(vals), {
+                headers: { "Content-Type": "application/json" },
+            });
+            handleData(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    const handleData = (data) => {
+        if (data.message === "authenticated") {
+            setUser(data.data);
+            console.log(data);
+            navigate('/explore');
+        } else if (data.message === "username not found") {
+            alert('Username not found');
+        } else if (data.message === "wrong password") {
+            alert('Wrong password');
+        }
+    };
 
     return (
-        < >
+        <>
             <div className="makeCenter top">
                 <div className="container_login makeCenter">
                     <div className="Login makeCenter space">Log in</div>
 
-                    <div className="choose ">
+                    <div className="choose">
                         <Link to='#'>Sign up as tutor</Link>
                         <div className="">or</div>
                         <Link to='#'>Sign up as a student</Link>
@@ -61,26 +57,41 @@ function Login() {
 
                     <div>INSERT GOOGLE AND OTHER LOGINS</div>
 
-                    <div class="parent ">
+                    <div className="parent">
                         <hr className="grid-hr" />
                         <div className="grid-item">or</div>
                         <hr className="grid-hr" />
                     </div>
                     
-                    <div className="login-form">
-                        {/* <input type="email" placeholder="Email" className="input-field" /> */}
-                        <input type="text" placeholder="Username" className="input-field" />
-                        <input type="password" placeholder="Password" className="input-field" />
-                        <button type="submit" className="submit-button" onClick={handleLoginClick}>Login</button>
+                    <form className="login-form" onSubmit={handleSubmit}>
+                        <input
+                            type="text"
+                            placeholder="Username"
+                            className="input-field"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            required
+                        />
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            className="input-field"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                        <button type="submit" className="submit-button">Login</button>
+                    </form>
+
+                    <div className="bottomText space">
+                        By clicking Log in or Continue with, you agree to Preply 
+                        <Link to="#" className="TOS">Terms of Use</Link> and 
+                        <Link to="#" className="TOS">Privacy Policy</Link>
                     </div>
-
-                    <div className="bottomText space">By clicking Log in or Continue with, you agree to Preply <Link><a href="#" className="TOS">Terms of Use</a></Link> and <Link><a href="#" className="TOS">Privacy Policy</a></Link></div>
-
-
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default Login
+export default Login;

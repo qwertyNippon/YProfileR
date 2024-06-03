@@ -1,44 +1,48 @@
+// SignUp.jsx
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-import './SignUp.css'
+import './SignUp.css';
 
+const BASE_URL = 'http://localhost:5000'; // Replace with your Flask backend URL
 
 function SignUp() {
-    const [email, setEmail] = useState()
-    const [userName, setUserName] = useState()
-    const [password, setPassword] = useState()
+    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
-    const handleSubmit = e => {
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
         e.preventDefault();
-        const form = e.target;
-        console.log(form);
-        let vals = {};
-        vals['email']= e.target[0].value;
-        vals['username']= e.target[1].value;
-        vals['pass'] = e.target[2].value;
-        console.log(vals);
-        axios.post(`${BASE_URL}/signup`, JSON.stringify(vals), {
-            // when sight goes live the above address needs to change
+
+        const vals = {
+            email: email,
+            username: username,
+            password: password,
+            confirm_password: confirmPassword,
+        };
+
+        axios.post(`${BASE_URL}/register`, JSON.stringify(vals), {
             headers: { "Content-Type": "application/json" }
-        }
-        )
+        })
         .then(function (response) {
-            // console.log(response);
-            navi('/login')
+            console.log(response);
+            navigate('/login');
         })
         .catch(function (error) {
             console.log(error);
         });
-    }
+    };
 
     const handleLoginClick = () => {
-        window.location.href = '/Login';
-      };
+        navigate('/login');
+    };
 
     return (
-        < >
+        <>
             <div className="makeCenter top">
                 <div className="container_login makeCenter">
                     <div className="Login makeCenter space">Sign up</div>
@@ -51,27 +55,57 @@ function SignUp() {
 
                     <div>INSERT GOOGLE AND OTHER LOGINS</div>
 
-                    <div class="parent ">
+                    <div className="parent ">
                         <hr className="grid-hr" />
                         <div className="grid-item">or</div>
                         <hr className="grid-hr" />
                     </div>
                     
-                    <div className="login-form">
-                        <input type="email" placeholder="Email" className="input-field" />
-                        <input type="text" placeholder="Username" className="input-field" />
-                        <input type="password" placeholder="Password" className="input-field" />
-                        <input type="password" placeholder="Confirm Password" className="input-field" />
-                        <button type="submit" className="submit-button" onClick={handleLoginClick}>Sign up</button>
+                    <form className="login-form" onSubmit={handleSubmit}>
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            className="input-field"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder="Username"
+                            className="input-field"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            required
+                        />
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            className="input-field"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                        <input
+                            type="password"
+                            placeholder="Confirm Password"
+                            className="input-field"
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                            required
+                        />
+                        <button type="submit" className="submit-button">Sign up</button>
+                    </form>
+
+                    <div className="bottomText space">
+                        By clicking Sign up or Continue with, you agree to Preply 
+                        <Link to="#" className="TOS">Terms of Use</Link> and 
+                        <Link to="#" className="TOS">Privacy Policy</Link>
                     </div>
-
-                    <div className="bottomText space">By clicking Log in or Continue with, you agree to Preply <Link><a href="#" className="TOS">Terms of Use</a></Link> and <Link><a href="#" className="TOS">Privacy Policy</a></Link></div>
-
-
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default SignUp
+export default SignUp;
