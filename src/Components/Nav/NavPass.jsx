@@ -1,23 +1,24 @@
-// NavPass.jsx
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { DataContext } from "../../context/DataProvider";
+import { UserContext } from "../../context/UserContext"; // Import the UserContext
+import axios from "axios";
 import Icons from '../Icons/Profile_icons';
 import ArrowDownIcons from '../Icons/ArrowDown_icons';
+import LogoutIcon  from '../Icons/Logout_icons';
 import LanguageIcons from '../Icons/Langauge_icons';
 import './NavPass.css';
 import Logo from '../../assets/Logo.png';
 import i18next from 'i18next';
 import LanguageSelection from '../Language/LanguageSelection';
 
+const BASE_URL = 'http://127.0.0.1:5000'; // Your Flask backend URL
+
 function NavPass() {
     const { t } = useTranslation();
-    const { user, setUser } = useContext(DataContext);
+    const { user, setUser } = useContext(UserContext); // Use UserContext
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const navigate = useNavigate();
-
-    const fallbackLanguage = i18next.options.resources[0]; // Extract language code
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
@@ -28,9 +29,20 @@ function NavPass() {
         setIsDropdownOpen(false); // Close dropdown after changing language
     };
 
-    const logout = () => {
-        setUser(null);
-        navigate('/home');
+    const logout = async () => {
+        try {
+            const response = await axios.post(`${BASE_URL}/logout`, {}, {
+                headers: { "Content-Type": "application/json" },
+            });
+            if (response.status === 200) {
+                setUser(null);
+                navigate('/Home'); // Navigate to the home page after successful logout
+            } else {
+                console.error('Logout failed:', response);
+            }
+        } catch (error) {
+            console.error('Logout failed:', error);
+        }
     };
 
     return (
@@ -108,7 +120,7 @@ function NavPass() {
             {user && (
                 <li>
                     <div className="logsign">
-                        <Link className="textD" to="/" onClick={logout}>LOGOUT</Link>
+                        <Link className="textD" to="/" onClick={logout}><LogoutIcon /></Link>
                     </div>
                 </li>
             )}
