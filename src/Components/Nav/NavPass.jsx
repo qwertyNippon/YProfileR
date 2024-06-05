@@ -5,7 +5,7 @@ import { UserContext } from "../../context/UserContext"; // Import the UserConte
 import axios from "axios";
 import Icons from '../Icons/Profile_icons';
 import ArrowDownIcons from '../Icons/ArrowDown_icons';
-import LogoutIcon  from '../Icons/Logout_icons';
+import LogoutIcon from '../Icons/Logout_icons';
 import LanguageIcons from '../Icons/Langauge_icons';
 import './NavPass.css';
 import Logo from '../../assets/Logo.png';
@@ -61,9 +61,9 @@ function NavPass() {
                 </div>
                 <div>
                     <nav>
-                        <ul>
-                            <div className="lang-container">
-                                <Link to='#' className="navLinks"><LanguageIcons /></Link>
+                        <ul className="right-items">
+                            <div className="lang-container hover-grow"> {/* Added hover-grow class */}
+                                <Link to='#' className="navLinks" onClick={toggleDropdown}><LanguageIcons /></Link>
                                 <Link to='#' className="navLinks" onClick={toggleDropdown}><ArrowDownIcons /></Link>
                                 {isDropdownOpen && (
                                     <div className="dropdown-menu">
@@ -79,6 +79,13 @@ function NavPass() {
                                 <button className="friendButt"><Link to='#' className="navLinks">{t('referF')}</Link></button>
                             </span>
                             <Link to='#' className="navLinks"><Icons /></Link>
+                            {user && (
+                                <li>
+                                    <div className="logsign">
+                                        <Link className="textD" to="/Home" onClick={logout}><LogoutIcon /></Link>
+                                    </div>
+                                </li>
+                            )}
                         </ul>
                     </nav>
                 </div>
@@ -117,13 +124,6 @@ function NavPass() {
                 </div>
             </header>
             <hr className="noShow hr" />
-            {user && (
-                <li>
-                    <div className="logsign">
-                        <Link className="textD" to="/" onClick={logout}><LogoutIcon /></Link>
-                    </div>
-                </li>
-            )}
         </>
     );
 }

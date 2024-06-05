@@ -37,7 +37,7 @@ function NavLogin() {
                 <div className="log_butt_right_container">
                     <div className="blok">
                         <div className="lang-container">
-                            <Link to='#' className="navLinks"><LanguageIcons /></Link>
+                            <Link to='#' className="navLinks" onClick={toggleDropdown}><LanguageIcons /></Link>
                             <Link to='#' className="navLinks" onClick={toggleDropdown}><ArrowDownIcons /></Link>
                             {isDropdownOpen && (
                                 <div className="dropdown-menu">

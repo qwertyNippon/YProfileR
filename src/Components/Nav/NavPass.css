@@ -1,7 +1,7 @@
 :root {
     --primary-color: #222260;
-    --primary-color2: 'color: rgba(34, 34, 96, .6)';
-    --primary-color3: 'color: rgba(34, 34, 96, .4)';
+    --primary-color2: rgba(34, 34, 96, .6);
+    --primary-color3: rgba(34, 34, 96, .4);
     --color-green: #42AD00;
     --color-red: #FF0000;
     --color-grey: #e3e2e2;
@@ -18,7 +18,6 @@
     --mob-color: #444444;
     --logo-type-color: #844298;
 }
-
 
 .container {
     display: flex;
@@ -80,7 +79,6 @@ nav .logo a span {
 nav ul {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     gap: 25px;
     margin-top: 0;
     margin-bottom: 0;
@@ -93,17 +91,17 @@ nav ul div a {
     transition: 0.4s ease;  
 }
 
-nav ul div button :hover {
+nav ul div button:hover {
     color: var(--text-color);
     border-color: none;
-
 }
 
 a {
     text-decoration: none;
-  }
+}
 
-  .selectOptions button {
+.selectOptions button {
+    width: 100%;
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.4em 0em;
@@ -113,29 +111,25 @@ a {
     background-color: var(--white--);
     cursor: pointer;
     transition: border-color 0.25s;
-  }
+}
 
-  .selectOptions button :hover {
+.selectOptions button:hover {
     border-radius: 8px;
     background-color: #f9f9f9;
-    padding: 0.7rem 0.5rem;
-    margin: 1.1rem -0.5rem;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-  }
+}
 
 .friendButt {
+    min-width: 90px;
     border-radius: 8px;
-    border: 2px solid ;
+    border: 2px solid;
     padding: 0.4rem 0.8rem;
     font-size: 1rem;
     background-color: var(--white--);
     cursor: pointer;
 }
 
-.friendButt:hover{
-    background-color:var(--color-grey);
+.friendButt:hover {
+    background-color: var(--color-grey);
 }
 
 .noShow {
@@ -151,7 +145,7 @@ a {
     border-top: 1px solid #000;
 }
 
-@media screen and (max-width: 875px){
+@media screen and (max-width: 875px) {
     .noShow {
         display: none;
     }
@@ -159,17 +153,22 @@ a {
 
 .lang-container {
     display: flex;
-  }
-  
-  .lang-container > .navLinks {
-    margin-right: 5px;
-  }
-
-  .lang-container {
     position: relative; /* Needed for absolute positioning of the dropdown menu */
-  }
-  
-  .dropdown-menu {
+}
+
+.lang-container > .navLinks {
+    margin-right: 10px;
+}
+
+.hover-grow:hover .navLinks {
+    transform: scale(1.2);
+}
+
+.hover-grow .navLinks {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
     position: absolute;
     top: 100%;
     left: -50%;
@@ -179,29 +178,36 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     border-radius: 7px;
     z-index: 1;
-  }
-  
-  .dropdown-menu ul {
+}
+
+.dropdown-menu ul {
     list-style: none;
     flex-direction: column;
     cursor: pointer;
     margin: 0;
     padding: 0;
-  }
+}
 
-  .dropdown-menu ul li:hover {
+.dropdown-menu ul li:hover {
     background-color: var(--logo-type-color);
     border-radius: 7px;
     color: var(--whiteProfile);
-  }
-  
-  .dropdown-menu li {
+}
+
+.dropdown-menu li {
     padding: 0px 5px;
     gap: -8px 0px;
-  }
+}
 
 #LangLi {
     margin: -20px 0px;
     text-align: left;
-  }
+}
 
+.logsign:hover {
+    scale: 1.2;
+}
+
+.right-items {
+    margin-right: 15px;
+}
