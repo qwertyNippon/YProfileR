@@ -8,30 +8,29 @@ import uploadIcon from '../../../src/assets/uploadIcon.png';
 function Profile() {
     const { t } = useTranslation();
 
-    // Define state to store user profile data
     const [userData, setUserData] = useState(null);
     const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchUserData = async () => {
-            try {
-                const response = await axios.get('/profile');
-                // Assuming Flask endpoint is '/api/profile' THIS WILL NEED TO BE CHANGED
-                setUserData(response.data);
-            } catch (error) {
-                setError('Error fetching user profile data');
-            }
-        };
-
-        fetchUserData();
-    }, []);
-
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [text, setText] = useState("");
     const [textCertz, setTextCertz] = useState("");
     const [textareaHeight, setTextareaHeight] = useState("63px");
     const [textareaHeightCertz, setTextareaHeightCertz] = useState("63px");
+    const [imgLink, setImgLink] = useState(null);
+    const [selectedFile, setSelectedFile] = useState(null);
+
+    useEffect(() => {
+        const fetchUserData = async () => {
+            try {
+                const response = await axios.get('/profile/Profile');
+                setUserData(response.data);
+            } catch (error) {
+                setError('Error fetching user profile data');
+            }
+        };
+    
+        fetchUserData();
+    }, []);
 
     const handleChangeFirstName = (e) => {
         setFirstName(e.target.value);
@@ -51,46 +50,20 @@ function Profile() {
         setTextareaHeightCertz(`${event.target.scrollHeight}px`);
     };
 
-    const handleSave = () => {
-        // Assuming your backend endpoint is '/saveBio' and you're sending a POST request
-        fetch('/profile', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ bio: text, certz: textCertz, firstname: firstName, lastname: lastName }),
-        })
-        .then(response => {
-            if (response.ok) {
-                console.log('Bio saved successfully!');
-                // You can add further actions here if needed
-            } else {
-                console.error('Failed to save bio');
-            }
-        })
-        .catch(error => {
-            console.error('Error saving bio:', error);
-        });
-    };
-
-    // Image upload state and handlers
-    const [imgLink, setImgLink] = useState(null);
-
-    const uploadImage = (file) => {
-        const link = URL.createObjectURL(file);
-        setImgLink(link);
-    };
-
     const handleFileChange = (e) => {
         if (e.target.files && e.target.files[0]) {
-            uploadImage(e.target.files[0]);
+            setSelectedFile(e.target.files[0]);
+            const link = URL.createObjectURL(e.target.files[0]);
+            setImgLink(link);
         }
     };
 
     const handleDrop = (e) => {
         e.preventDefault();
         if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-            uploadImage(e.dataTransfer.files[0]);
+            setSelectedFile(e.dataTransfer.files[0]);
+            const link = URL.createObjectURL(e.dataTransfer.files[0]);
+            setImgLink(link);
         }
     };
 
@@ -98,7 +71,27 @@ function Profile() {
         e.preventDefault();
     };
 
-    const {line1, line1a, line2} = t('upLoadImage');
+    const handleSave = () => {
+        const formData = new FormData();
+        formData.append('username', firstName); // Change 'firstname' to 'username'
+        formData.append('lastname', lastName);
+        formData.append('bio', text);
+        formData.append('certz', textCertz);
+        formData.append('photo', selectedFile);
+    
+        axios.post('/profile/Profile', formData, { // Change '/profile' to '/profile/Profile'
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
+        .then(response => {
+            console.log('Profile saved successfully!');
+        })
+        .catch(error => {
+            console.error('Error saving profile:', error);
+        });
+    };
+    const { line1, line1a, line2 } = t('upLoadImage');
 
     return (
         <>
