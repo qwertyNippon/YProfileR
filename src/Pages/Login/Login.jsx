@@ -88,8 +88,8 @@ function Login() {
 
                 <div className="bottomText space">
                     By clicking Log in or Continue with, you agree to our 
-                    <Link to="#" className="TOS">Terms of Use</Link> and 
-                    <Link to="#" className="TOS">Privacy Policy</Link>
+                    <Link to="#" className="TOS"> Terms of Use</Link> and 
+                    <Link to="#" className="TOS"> Privacy Policy</Link>
                 </div>
             </div>
         </div>
