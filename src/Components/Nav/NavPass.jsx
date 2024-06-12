@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { UserContext } from "../../context/UserContext"; // Import the UserContext
+import { UserContext } from "../../context/UserContext"; 
 import axios from "axios";
 import Icons from '../Icons/Profile_icons';
 import ArrowDownIcons from '../Icons/ArrowDown_icons';
@@ -12,13 +12,20 @@ import Logo from '../../assets/Logo.png';
 import i18next from 'i18next';
 import LanguageSelection from '../Language/LanguageSelection';
 
-const BASE_URL = 'http://127.0.0.1:5000'; // Your Flask backend URL
+const BASE_URL = 'http://127.0.0.1:5000';
 
 function NavPass() {
     const { t } = useTranslation();
-    const { user, setUser } = useContext(UserContext); // Use UserContext
+    const { user, setUser } = useContext(UserContext); 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const storedUser = localStorage.getItem('user');
+        if (storedUser) {
+            setUser(JSON.parse(storedUser));
+        }
+    }, [setUser]);
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
@@ -26,7 +33,7 @@ function NavPass() {
 
     const changeLanguage = (language) => {
         i18next.changeLanguage(language);
-        setIsDropdownOpen(false); // Close dropdown after changing language
+        setIsDropdownOpen(false); 
     };
 
     const logout = async () => {
@@ -36,7 +43,8 @@ function NavPass() {
             });
             if (response.status === 200) {
                 setUser(null);
-                navigate('/Home'); // Navigate to the home page after successful logout
+                localStorage.removeItem('user');
+                navigate('/Home');
             } else {
                 console.error('Logout failed:', response);
             }
@@ -62,7 +70,7 @@ function NavPass() {
                 <div>
                     <nav>
                         <ul className="right-items">
-                            <div className="lang-container hover-grow"> {/* Added hover-grow class */}
+                            <div className="lang-container hover-grow">
                                 <Link to='#' className="navLinks" onClick={toggleDropdown}><LanguageIcons /></Link>
                                 <Link to='#' className="navLinks" onClick={toggleDropdown}><ArrowDownIcons /></Link>
                                 {isDropdownOpen && (
