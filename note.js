@@ -5,4 +5,4 @@
 // video
 // profile
 
-// I think the issue is on the front end
+// next is to put restrictions on permissions
