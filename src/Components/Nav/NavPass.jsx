@@ -23,7 +23,6 @@ function NavPass() {
         const storedUser = localStorage.getItem('user');
         if (storedUser) {
             setUser(JSON.parse(storedUser));
-            console.log("User loaded from localStorage:", storedUser);
         }
     }, [setUser]);
 
@@ -51,7 +50,6 @@ function NavPass() {
             });
             if (response.status === 200) {
                 setUser(null);
-                localStorage.removeItem('user');
                 navigate('/Home');
             } else {
                 console.error('Logout failed:', response);
