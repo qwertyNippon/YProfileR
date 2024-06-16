@@ -10,7 +10,6 @@ import LanguageIcons from '../Icons/Langauge_icons';
 import './NavPass.css';
 import Logo from '../../assets/Logo.png';
 import i18next from 'i18next';
-import LanguageSelection from '../Language/LanguageSelection';
 
 const BASE_URL = 'http://127.0.0.1:5000';
 
@@ -24,8 +23,17 @@ function NavPass() {
         const storedUser = localStorage.getItem('user');
         if (storedUser) {
             setUser(JSON.parse(storedUser));
+            console.log("User loaded from localStorage:", storedUser);
         }
     }, [setUser]);
+
+    useEffect(() => {
+        if (user) {
+            localStorage.setItem('user', JSON.stringify(user));
+        } else {
+            localStorage.removeItem('user');
+        }
+    }, [user]);
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
