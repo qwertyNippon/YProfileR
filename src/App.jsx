@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      {(location.pathname === '/Login' || location.pathname === '/SignUp' || location.pathname === '/Home' || location.pathname === '/') ? <NavLogin /> : <NavPass />}
+      {(location.pathname === '/login' || location.pathname === '/SignUp' || location.pathname === '/Home' || location.pathname === '/') ? <NavLogin /> : <NavPass />}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Login' element={<Login />} />
