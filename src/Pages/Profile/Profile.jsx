@@ -8,6 +8,8 @@ import uploadIcon from '../../../src/assets/uploadIcon.png';
 function Profile() {
     const { t } = useTranslation();
 
+    const BASE_URL = 'http://127.0.0.1:5000'; // Your Flask backend URL
+
     const [userData, setUserData] = useState(null);
     const [error, setError] = useState(null);
     const [firstName, setFirstName] = useState('');
@@ -22,7 +24,7 @@ function Profile() {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await axios.get('/profile/Profile');
+                const response = await axios.get(`${BASE_URL}/profile/Profile/`);
                 setUserData(response.data);
             } catch (error) {
                 setError('Error fetching user profile data');
@@ -73,24 +75,27 @@ function Profile() {
 
     const handleSave = () => {
         const formData = new FormData();
-        formData.append('username', firstName); // Change 'firstname' to 'username'
+        formData.append('firstname', firstName);
         formData.append('lastname', lastName);
         formData.append('bio', text);
         formData.append('certz', textCertz);
         formData.append('photo', selectedFile);
-    
-        axios.post('/profile/Profile', formData, { // Change '/profile' to '/profile/Profile'
+
+        axios.post(`${BASE_URL}/profile/Profile/`, formData, {  // Adjusted endpoint to match Flask route
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         })
         .then(response => {
-            console.log('Profile saved successfully!');
+            console.log('Profile saved successfully!', response.data);
+            // Handle success (e.g., show success message)
         })
         .catch(error => {
             console.error('Error saving profile:', error);
+            // Handle error (e.g., show error message)
         });
     };
+
     const { line1, line1a, line2 } = t('upLoadImage');
 
     return (

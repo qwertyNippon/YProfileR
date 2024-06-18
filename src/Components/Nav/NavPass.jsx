@@ -11,7 +11,7 @@ import './NavPass.css';
 import Logo from '../../assets/Logo.png';
 import i18next from 'i18next';
 
-const BASE_URL = 'http://127.0.0.1:5000';
+const BASE_URL = 'http://127.0.0.1:5000'; // Your Flask backend URL
 
 function NavPass() {
     const { t } = useTranslation();
