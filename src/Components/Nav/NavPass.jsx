@@ -121,18 +121,18 @@ function NavPass() {
                             <div className="selectOptions">
                                 <button><Link to='/Calendar'>{t('calendar')}</Link></button>
                             </div>
-                            <div className="selectOptions">
+                            {/* <div className="selectOptions">
                                 <button><Link to='/Statistics'>{t('statistics')}</Link></button>
-                            </div>
+                            </div> */}
                             <div className="selectOptions">
                                 <button><Link to='/Profile'>{t('profile')}</Link></button>
                             </div>
                             <div className="selectOptions">
                                 <button><Link to='/Settings'>{t('settings')}</Link></button>
                             </div>
-                            <div className="selectOptions">
+                            {/* <div className="selectOptions">
                                 <button><Link to='/Community'>{t('community')}</Link></button>
-                            </div>
+                            </div> */}
                         </ul>
                     </nav>
                 </div>
