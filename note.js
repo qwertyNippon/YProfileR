@@ -5,3 +5,4 @@
 // video
 // profile
 
+// check login, if you dont have that you can't do anything else
